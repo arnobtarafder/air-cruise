@@ -1,8 +1,9 @@
 import React from "react";
 import CountUp from "react-countup";
-import { VscShield } from "react-icons/vsc";
-import { GiSteeringWheel, GiTrophyCup } from "react-icons/gi";
-import { FiHeart } from "react-icons/fi";
+import { BiWorld} from "react-icons/bi";
+import { FaShoppingBasket } from "react-icons/fa";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { VscFeedback } from "react-icons/vsc";
 import "./Statistics.css";
 
 const Statistics = () => {
@@ -11,13 +12,13 @@ const Statistics = () => {
 
             <div class="stat place-items-center">
                 <div className="icons stat-title">
-                    <GiSteeringWheel
+                    <BiWorld
                         style={{ fontSize: "5rem", color: "#fff" }}
-                    ></GiSteeringWheel>
+                    ></BiWorld>
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={1238} duration={5} />
+                        <CountUp delay={5} end={60} duration={7} />
                     </span>
                     +
                 </div>
@@ -27,13 +28,13 @@ const Statistics = () => {
 
             <div class="stat place-items-center">
                 <div className="icons stat-title">
-                    <GiSteeringWheel
+                    <FaShoppingBasket
                         style={{ fontSize: "5rem", color: "#fff" }}
-                    ></GiSteeringWheel>
+                    ></FaShoppingBasket>
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={1238} duration={5} />
+                        <CountUp delay={5} end={78} duration={7} />
                     </span>
                     +
                 </div>
@@ -43,13 +44,13 @@ const Statistics = () => {
 
             <div class="stat place-items-center">
                 <div className="icons stat-title">
-                    <GiSteeringWheel
+                    <BsFillPeopleFill
                         style={{ fontSize: "5rem", color: "#fff" }}
-                    ></GiSteeringWheel>
+                    ></BsFillPeopleFill>
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={1238} duration={5} />
+                        <CountUp delay={5} end={1125} duration={9} />
                     </span>
                     +
                 </div>
@@ -59,13 +60,13 @@ const Statistics = () => {
 
             <div class="stat place-items-center">
                 <div className="icons stat-title">
-                    <GiSteeringWheel
+                    <VscFeedback
                         style={{ fontSize: "5rem", color: "#fff" }}
-                    ></GiSteeringWheel>
+                    ></VscFeedback>
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={1238} duration={5} />
+                        <CountUp delay={5} end={48900} duration={11} />
                     </span>
                     +
                 </div>
