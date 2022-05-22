@@ -9,7 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-hot-toast";
 import auth from "../../../firebase.init";
 import Loading from "../../General/Loading/Loading";
-import useToken from "../../../hooks/useToken";
+import useToken from "../../../Hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -144,7 +144,7 @@ const Login = () => {
           <p className="text-center font-semibold">
             <small>
               Don't have an account?{" "}
-              <Link className="text-primary" to="/sign-up">
+              <Link className="text-primary" to="/registration">
                 Create New Account
               </Link>
             </small>
