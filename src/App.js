@@ -1,10 +1,18 @@
+
 import './App.css';
+import Navbar from './Components/General/Navbar/Navbar';
+
+
 
 function App() {
+
+
+
   return (
-    <div className="App">
-     <h1 className='7xl text-green-500'>Hello World</h1>
-    </div>
+    <div >
+ 
+        <Navbar />
+       </div>
   );
 }
 
