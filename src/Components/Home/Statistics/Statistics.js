@@ -22,7 +22,7 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-desc">Countries</div>
+                <div class="stat-title text-2xl text-blue-400">Countries</div>
             </div>
 
 
@@ -38,7 +38,7 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title">Products</div>
+                <div class="stat-title text-2xl text-yellow-400">Products</div>
             </div>
 
 
@@ -54,7 +54,7 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title">Happy Clients</div>
+                <div class="stat-title text-2xl text-green-400">Happy Clients</div>
             </div>
 
 
@@ -66,11 +66,11 @@ const Statistics = () => {
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={48900} duration={11} />
+                        <CountUp delay={5} end={48900} duration={19} />
                     </span>
                     +
                 </div>
-                <div class="stat-title">Feedback</div>
+                <div class="stat-title text-2xl text-red-400">Feedback</div>
             </div>
 
         </div>
