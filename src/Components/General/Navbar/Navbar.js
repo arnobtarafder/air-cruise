@@ -23,6 +23,8 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
       autoClose: 5000,
     });
   };
+
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = (
     <>
@@ -125,6 +127,8 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
       </li>
     </>
   );
+
+
   return (
     <section className="flex justify-center mb-8">
       <div className="fixed top-0 w-full z-50">
