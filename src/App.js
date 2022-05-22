@@ -3,6 +3,8 @@ import { PulseLoader } from 'react-spinners';
 import './App.css';
 import Navbar from './Components/General/Navbar/Navbar';
 import { css } from "@emotion/react";
+import Home from './Pages/Home';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -41,7 +43,7 @@ function App() {
 
 
   return (
-    <div data-theme={theme && "night"}>
+    <div data-theme={theme && "night"} className="bg-base-100">
 
       {loading ? (
         <PulseLoader
@@ -53,6 +55,11 @@ function App() {
       ) : (
         <Navbar handleThemeChange={handleThemeChange} theme={theme} />
       )}
+
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+      </Routes>
 
 
 

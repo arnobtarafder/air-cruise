@@ -23,6 +23,7 @@ module.exports = {
           green: "#2e8540",
           "base-100": "#ffffff",
           "base-200": "#E9F6FF",
+          "base-300": "#FBFFFC",
         },
       },
       "night",
