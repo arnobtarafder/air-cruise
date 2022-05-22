@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './Components/General/Footer/Footer';
 import SignIn from './Pages/Login';
+import SignUp from './Pages/Registration';
 
 
 
@@ -62,6 +63,7 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<SignIn />}></Route>
+        <Route path='/registration' element={<SignUp />}></Route>
       </Routes>
 
       <Footer/>
