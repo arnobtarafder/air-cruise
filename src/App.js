@@ -5,6 +5,7 @@ import Navbar from './Components/General/Navbar/Navbar';
 import { css } from "@emotion/react";
 import Home from './Pages/Home';
 import { Route, Routes } from 'react-router-dom';
+import Footer from './Components/General/Footer/Footer';
 
 
 
@@ -61,7 +62,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
       </Routes>
 
-
+      <Footer/>
 
     </div>
   );

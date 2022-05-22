@@ -14,7 +14,7 @@ const Review = () => {
       name: "Nash Patrik",
       title: "CEO, Manpol",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-      rate: 5.0
+      rate: 1.0
     },
     {
       name: "Miriam Barron",
@@ -26,7 +26,7 @@ const Review = () => {
       name: "Bria Malone",
       title: "CEO, Manpol",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-      rate: 5.0
+      rate: 3.0
     },
     {
       name: "Nash Patrik",
@@ -50,7 +50,7 @@ const Review = () => {
       name: "Miriam Barron",
       title: "CEO, Manpol",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-      rate: 5.0
+      rate: 2.0
     },
   ];
 
@@ -75,7 +75,7 @@ const Review = () => {
               spaceBetween: 40,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 50,
             },
           }}
