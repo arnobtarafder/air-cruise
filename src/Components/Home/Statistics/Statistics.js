@@ -70,7 +70,7 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title text-2xl text-red-400">Feedback</div>
+                <div class="stat-title text-2xl text-red-400">Reviews</div>
             </div>
 
         </div>

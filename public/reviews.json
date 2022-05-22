@@ -1,0 +1,44 @@
+[
+    {
+        "image": "https://raw.githubusercontent.com/kiron0/reviewsFakeData/main/images/jhankarmahbub.jpg",
+        "id": 2,
+        "name": "Jhankar Mahbub",
+        "message": "I will highly recommend this shop. their's products are well and their service is mind blowing. This is not a paid review.",
+        "rate": 5.0
+    },
+    {
+        "image": "https://freepikpsd.com/file/2019/10/avatar-icon-png-5-Images-PNG-Transparent.png",
+        "id": 3,
+        "name": "Arnob Tarafder",
+        "message": "Get the outstanding service. the shoes are really so much well and good. you will also get many offers with the products that will blow your mind.",
+        "rate": 4.4
+    },
+    {
+        "image": "https://www.oneindia.com/politicians/image/302x100x402x1/ratan-lal-nath-20970.jpg",
+        "id": 1,
+        "name": "Roton Lal",
+        "message": "Hello! I am roton. I want to say that you should come here and boil your money to buy the products. it will get you peace. that's why you should get me full marks. thanks.",
+        "rate": 4.8
+    },
+    {
+        "image": "https://raw.githubusercontent.com/kiron0/reviewsFakeData/main/images/sumit.jpg",
+        "id": 4,
+        "name": "Sumit Saha",
+        "message": "It is my luck that I have a shoe from here. you should must buy products from here because only they sell their products at low cost with high quality",
+        "rate": 4.3
+    },
+    {
+        "image": "https://raw.githubusercontent.com/kiron0/reviewsFakeData/main/images/anisur.jpg",
+        "id": 5,
+        "name": "Anisur Rahman",
+        "message": "I am Anisur. that's why I bought many products from here. you should also do the same thing as like as me. and it was a review",
+        "rate": 4.6
+    },
+    {
+        "image": "https://raw.githubusercontent.com/kiron0/reviewsFakeData/main/images/anisul.jpg",
+        "id": 6,
+        "message": "I'd always wanted to try them, but for one reason or the other I kept faltering... finally pushed me over the fence, and am I glad I did! The team's courtesy, the great communication, their awesome service impressed me even before receiving the shoes.",
+        "name": "Anisul Islam",
+        "rate": 3.9
+    }
+]
