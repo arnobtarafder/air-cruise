@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './Components/General/Footer/Footer';
 import SignIn from './Pages/Login';
 import SignUp from './Pages/Registration';
+import ResetPassword from './Components/Authentication/ResetPassword/ResetPassword';
 
 
 
@@ -64,6 +65,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<SignIn />}></Route>
         <Route path='/registration' element={<SignUp />}></Route>
+        <Route path='/reset-password' element={<ResetPassword />}></Route>
       </Routes>
 
       <Footer/>
