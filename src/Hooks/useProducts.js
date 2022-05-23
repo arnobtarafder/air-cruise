@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useServices = () => {
-  const [services, setServices] = useState([]);
+const useProducts = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/services", {
@@ -12,11 +12,11 @@ const useServices = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setServices(data);
+        setProducts(data);
       });
   }, []);
 
-  return [services, setServices];
+  return [products, setProducts];
 };
 
-export default useServices;
+export default useProducts;

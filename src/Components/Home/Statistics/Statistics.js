@@ -34,7 +34,7 @@ const Statistics = () => {
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={78} duration={7} />
+                        <CountUp delay={5} end={7980} duration={778} />
                     </span>
                     +
                 </div>
@@ -50,7 +50,7 @@ const Statistics = () => {
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={1125} duration={9} />
+                        <CountUp delay={5} end={112500} duration={177} />
                     </span>
                     +
                 </div>
@@ -66,7 +66,7 @@ const Statistics = () => {
                 </div>
                 <div className="number stat-value">
                     <span>
-                        <CountUp delay={5} end={48900} duration={19} />
+                        <CountUp delay={5} end={4890000} duration={399999} />
                     </span>
                     +
                 </div>
