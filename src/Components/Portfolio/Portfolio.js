@@ -2,7 +2,7 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <div className="lg:py-16 md:py-12 bg-base-100 h-screen">
+    <div className="lg:py-16 md:py-12 bg-base-100 h-full">
       <section className="body-font bg-base-100">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
