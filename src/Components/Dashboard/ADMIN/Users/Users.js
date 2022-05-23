@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Loading from "../../../General/Loading/Loading";
 import UserDeleteConfirmModal from "./UserDeleteConfirmModal";
-import UserRow from "./UserRow";
+import UserRow from "../UserRow/UserRow";
 
 const Users = () => {
   const [deletingUser, setDeletingUser] = useState(null);
@@ -18,9 +18,12 @@ const Users = () => {
       },
     }).then((res) => res.json())
   );
+
   if (isLoading) {
     return <Loading></Loading>;
   }
+
+  
   return (
     <div className="px-10 py-10 bg-base-300 h-screen rounded-md">
       <div className="overflow-x-auto">
