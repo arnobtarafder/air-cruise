@@ -1,7 +1,47 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../../firebase.init";
+import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 
-const UserRow = ({ user, setDeletingUser, index }) => {
-  const { email, role } = user;
+
+const UserRow = ({ user: userInfo, index, refetch  }) => {
+  const [user] = useAuthState(auth);
+
+  const { name, specialty, img } = userInfo;
+  const { email, role } = userInfo;
+
+
+  const handleDelete = (email) => {
+    Swal.fire({
+        text: "Are you sure you want to delete this?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Delete it!",
+    }).then((result) => {
+        if (result.value) {
+            fetch(`https://medico-healer.herokuapp.com/doctors/${email}`, {
+                method: "DELETE",
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.acknowledged || data.deleteCount) {
+                        toast.success(`Doctor: ${name} is deleted`)
+                        refetch();
+                    }
+                });
+        }
+    });
+};
+
+
   return (
     <tr>
       <th>{index + 1}</th>
@@ -9,7 +49,7 @@ const UserRow = ({ user, setDeletingUser, index }) => {
       <td>{role}</td>
       <td>
         <label
-          onClick={() => setDeletingUser(user)}
+          onClick={() => handleDelete(userInfo)}
           htmlFor="user-delete-confirm-modal"
           className="btn btn-xs btn-primary text-white"
         >

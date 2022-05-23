@@ -68,6 +68,8 @@ function App() {
         <Route path='/registration' element={<SignUp />}></Route>
         <Route path='/reset-password' element={<ResetPassword />}></Route>
         <Route path='/portfolio' element={<Portfolio />}></Route>
+
+        
       </Routes>
 
       <Footer/>

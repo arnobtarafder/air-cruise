@@ -23,7 +23,7 @@ const Users = () => {
     return <Loading></Loading>;
   }
 
-  
+
   return (
     <div className="px-10 py-10 bg-base-300 h-screen rounded-md">
       <div className="overflow-x-auto">
@@ -41,7 +41,7 @@ const Users = () => {
               <UserRow
                 index={index}
                 key={user._id}
-                user={user}
+                userInfo={user}
                 refetch={refetch}
                 setDeletingUser={setDeletingUser}
               ></UserRow>
