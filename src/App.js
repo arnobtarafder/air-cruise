@@ -17,6 +17,7 @@ import Dashboard from './Pages/Dashboard';
 import MyProfile from './Components/Dashboard/MyProfile/MyProfile';
 import MyOrders from './Components/Dashboard/MyOrders/MyOrders';
 import AddReview from './Components/Dashboard/AddReview/AddReview';
+import MakeAdmin from './Components/Dashboard/ADMIN/MakeAdmin/MakeAdmin';
 
 
 
@@ -98,9 +99,9 @@ function App() {
           <Route
             path="makeAdmin"
             element={
-              <RequireAdmin>
+              <PrivateAuth>
                 <MakeAdmin></MakeAdmin>
-              </RequireAdmin>
+              </PrivateAuth>
             }
           ></Route>
         </Route>
