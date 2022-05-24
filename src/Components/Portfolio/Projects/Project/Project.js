@@ -1,12 +1,8 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import Fade from "react-reveal/Fade";
 
 
 
-const SingleProject = ({ work }) => {
+const Project = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
@@ -69,10 +65,11 @@ const SingleProject = ({ work }) => {
                     </div>
                 ))}
             </div>
+           
             <div className="bg-base-100 text-base-content my-20 py-5">
                 <p className="text-center">
                     For more query please email at{" "}
-                    <span className="font-semibold">mahiralkamal.mak@gmail.com</span>
+                    <span className="font-semibold">rmtarnob@gmail.com</span>
                 </p>
             </div>
         </section>
@@ -80,7 +77,7 @@ const SingleProject = ({ work }) => {
     );
 };
 
-export default SingleProject;
+export default Project;
 
 
 
