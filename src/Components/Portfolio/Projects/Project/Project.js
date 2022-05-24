@@ -24,7 +24,7 @@ const Project = () => {
                             <p className="text-xl">{project.type}</p>
                             <div className="flex flex-wrap gap-2">
                                 <a
-                                    href={project.liveSite}
+                                    href={project.website}
                                     rel="noreferrer"
                                     target={"_blank"}
                                     className="btn btn-primary text-white btn-sm"
@@ -32,7 +32,7 @@ const Project = () => {
                                     Live Site
                                 </a>
                                 <a
-                                    href={project.gitClient}
+                                    href={project.github}
                                     rel="noreferrer"
                                     target={"_blank"}
                                     className="btn btn-primary text-white btn-sm"
@@ -48,6 +48,7 @@ const Project = () => {
                                     Git Server
                                 </a>
                             </div>
+                            
                             <p className="text-bold">Features:</p>
                             <ul>
                                 {project?.features?.map((feature, index) => (

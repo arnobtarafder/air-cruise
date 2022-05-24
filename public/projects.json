@@ -1,63 +1,94 @@
 [
     {
       "id": "097",
-      "name": "CHAYA",
+      "name": "Medico Healer",
       "category": "full-stack",
-      "photo":
-        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
       "description":
-        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+        "A Single page web app with dashboard where people can pick the date and time and fix an appointment. A doctor can review his appointments and prescribe medicine to a Patient from his dashboard.",
+        "features": [
+          { "name": "Users can take an appointment of any doctor" },
+          { "name": "A doctor can contact patients" },
+          { "name": "Users can give reviews" },
+          { "name": "Anyone can buy our medicines" },
+          { "name": "Admin can control full dashboard system" },
+          { "name": "Doctor can get a premium profile" }
+        ],
       "technologies": [
         { "name": "React" },
-        { "name": "ContextAPI" },
-        { "name": "Tailwind" },
+        { "name": "React Router DOM v6" },
+        { "name": "Tailwind css" },
+        { "name": "Daisy UI" },
+        { "name": "React Toastify" },
+        { "name": "date-fns" },
+        { "name": "React Day Picker" },
+        { "name": "React Query" },
+        { "name": "React Helmet Async" },
+        { "name": "React Hook Form" },
+        { "name": "React Icons" },
+        { "name": "Sweet Alert 2" },
+        { "name": "Axios" },
+        { "name": "JSON web token" },
         { "name": "Firebase" },
+        { "name": "React Firebase Hooks" },
         { "name": "NodeJS" },
-        { "name": "SSLCOMMERZ" }
+        { "name": "Express js" },
+        { "name": "Mongo DB" },
+        { "name": "JSON Web Token(JWT)" },
+        { "name": "Stripe Payment" }
       ],
-      "github": "https://github.com/PriontoAbdullah",
-      "website": "https://www.bookchaya.com/",
+      "github": "https://github.com/arnobtarafder/medico-healer",
+      "website": "https://medico-healer.web.app/",
       "status": "featured"
     }, 
     {
       "id": "097",
-      "name": "CHAYA",
+      "name": "EduHash Mentor",
       "category": "full-stack",
-      "photo":
-        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
       "description":
-        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+        "This is an website where people can buy courses of Arnob. Also can pay the courses",
+        "features": [
+          { "name": "Anybody can buy our courses" },
+          { "name": "You can get many creative questions answers" },
+          { "name": "Users can see course biography or details" }
+        ],
       "technologies": [
         { "name": "React" },
-        { "name": "ContextAPI" },
+        { "name": "React-Bootstrap" },
         { "name": "Tailwind" },
+        { "name": "React Router DOM v6" },
+        { "name": "React-Toastify" },
         { "name": "Firebase" },
-        { "name": "NodeJS" },
-        { "name": "SSLCOMMERZ" }
+        { "name": "React Firebase Hooks" }
       ],
-      "github": "https://github.com/PriontoAbdullah",
-      "website": "https://www.bookchaya.com/",
+      "github": "https://github.com/arnobtarafder/eduhash-mentor",
+      "website": "https://eduhash-mentor.web.app/",
       "status": "featured"
     },
     
     {
       "id": "097",
-      "name": "CHAYA",
+      "name": "The Shoe Rack",
       "category": "full-stack",
-      "photo":
-        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
       "description":
-        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+        "This is a shoe selling website. One kind of shoe based e-commerce.",
+        "features": [
+        { "name": "You can see the business statistics report" },
+        { "name": "You will see all the reviews" },
+        { "name": "You can get many questions answers" }
+      ],
       "technologies": [
         { "name": "React" },
-        { "name": "ContextAPI" },
-        { "name": "Tailwind" },
-        { "name": "Firebase" },
-        { "name": "NodeJS" },
-        { "name": "SSLCOMMERZ" }
+        { "name": "react-bootstrap" },
+        { "name": "material-ui" },
+        { "name": "react-router-dom v6" },
+        { "name": "react-rating" },
+        { "name": "react-icons" },
+        { "name": "react-slick" },
+        { "name": "swiper js" },
+        { "name": "recharts" }
       ],
-      "github": "https://github.com/PriontoAbdullah",
-      "website": "https://www.bookchaya.com/",
+      "github": "https://github.com/arnobtarafder/the-shoe-rack/",
+      "website": "https://the-shoe-rack-45-04-2022-a9.netlify.app/",
       "status": "featured"
     }  
   ]
