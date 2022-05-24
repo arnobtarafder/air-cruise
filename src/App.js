@@ -12,6 +12,11 @@ import ResetPassword from './Components/Authentication/ResetPassword/ResetPasswo
 import Portfolio from './Pages/Portfolio';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrivateAuth from './Components/General/PrivateAuth/PrivateAuth';
+import Dashboard from './Pages/Dashboard';
+import MyProfile from './Components/Dashboard/MyProfile/MyProfile';
+import MyOrders from './Components/Dashboard/MyOrders/MyOrders';
+import AddReview from './Components/Dashboard/AddReview/AddReview';
 
 
 
@@ -77,6 +82,28 @@ function App() {
         <Route path='/reset-password' element={<ResetPassword />}></Route>
         {/* <Route path='/portfolio' element={<Portfolio />}></Route> */}
         <Route path='/portfolio' element={<Portfolio />}></Route>
+
+
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateAuth>
+              <Dashboard />
+            </PrivateAuth>
+          }
+        >
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
+          <Route path="addReview" element={<AddReview></AddReview>}></Route>
+          <Route
+            path="makeAdmin"
+            element={
+              <RequireAdmin>
+                <MakeAdmin></MakeAdmin>
+              </RequireAdmin>
+            }
+          ></Route>
+        </Route>
 
         
       </Routes>
