@@ -1,0 +1,63 @@
+[
+    {
+      "id": "097",
+      "name": "CHAYA",
+      "category": "full-stack",
+      "photo":
+        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
+      "description":
+        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+      "technologies": [
+        { "name": "React" },
+        { "name": "ContextAPI" },
+        { "name": "Tailwind" },
+        { "name": "Firebase" },
+        { "name": "NodeJS" },
+        { "name": "SSLCOMMERZ" }
+      ],
+      "github": "https://github.com/PriontoAbdullah",
+      "website": "https://www.bookchaya.com/",
+      "status": "featured"
+    }, 
+    {
+      "id": "097",
+      "name": "CHAYA",
+      "category": "full-stack",
+      "photo":
+        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
+      "description":
+        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+      "technologies": [
+        { "name": "React" },
+        { "name": "ContextAPI" },
+        { "name": "Tailwind" },
+        { "name": "Firebase" },
+        { "name": "NodeJS" },
+        { "name": "SSLCOMMERZ" }
+      ],
+      "github": "https://github.com/PriontoAbdullah",
+      "website": "https://www.bookchaya.com/",
+      "status": "featured"
+    },
+    
+    {
+      "id": "097",
+      "name": "CHAYA",
+      "category": "full-stack",
+      "photo":
+        "https://i.ibb.co/rwcCwTc/screencapture-bookchaya-2022-04-09-22-14-37-min-1-1-1.png",
+      "description":
+        "CHAYA is Bangladesh’s first space sharing marketplace that connects Space owners with Users looking to find and book spaces for their needs. Here users can book stays for short term living or book a venues for party, photoshoot.",
+      "technologies": [
+        { "name": "React" },
+        { "name": "ContextAPI" },
+        { "name": "Tailwind" },
+        { "name": "Firebase" },
+        { "name": "NodeJS" },
+        { "name": "SSLCOMMERZ" }
+      ],
+      "github": "https://github.com/PriontoAbdullah",
+      "website": "https://www.bookchaya.com/",
+      "status": "featured"
+    }  
+  ]

@@ -19,6 +19,7 @@ import firebase from "../../images/logo/firebase.png";
 import iub from "../../images/logo/iub.jpg";
 import LandBanner from "../Components/Portfolio/LandBanner/LandBanner";
 import Skills from "../Components/Portfolio/Skills/Skills";
+import SingleProject from "../Components/Portfolio/Projects/Project/Project";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
@@ -57,6 +58,27 @@ const Portfolio = () => {
           </div>
         </div> */}
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       <h3 className=" text-2xl lg:text-4xl text-center my-20">
         <span className="font-semibold ">Personal.</span> Projects
       </h3>
