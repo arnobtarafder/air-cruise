@@ -9,7 +9,7 @@ import Footer from './Components/General/Footer/Footer';
 import SignIn from './Pages/Login';
 import SignUp from './Pages/Registration';
 import ResetPassword from './Components/Authentication/ResetPassword/ResetPassword';
-import Portfolio from './Components/Portfolio/Portfolio';
+import Portfolio from './Pages/Portfolio';
 
 
 
@@ -67,6 +67,7 @@ function App() {
         <Route path='/login' element={<SignIn />}></Route>
         <Route path='/registration' element={<SignUp />}></Route>
         <Route path='/reset-password' element={<ResetPassword />}></Route>
+        {/* <Route path='/portfolio' element={<Portfolio />}></Route> */}
         <Route path='/portfolio' element={<Portfolio />}></Route>
 
         
