@@ -17,8 +17,8 @@ const Project = () => {
                 <span className="font-semibold ">Personal.</span> Projects
             </h3>
             <div className="max-w-7xl mx-auto mb-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projects?.map((project) => (
-                    <div key={project._id} className="card w-full bg-base-100">
+                {projects?.map((project, index) => (
+                    <div key={index} className="card w-full bg-base-100">
                         <div className="card-body">
                             <h2 className="card-title text-2xl">{project.name}</h2>
                             <p className="text-xl">{project.type}</p>
@@ -50,14 +50,14 @@ const Project = () => {
                             </div>
                             <p className="text-bold">Features:</p>
                             <ul>
-                                {project?.features?.map((feature) => (
-                                    <li key={feature._tid}>- {feature.name}</li>
+                                {project?.features?.map((feature, index) => (
+                                    <li key={index}>- {feature.name}</li>
                                 ))}
                             </ul>
                             <p className="text-bold">Technologies Used:</p>
                             <ul>
-                                {project?.technologies?.map((technology) => (
-                                    <li key={technology._uid}>- {technology.name}</li>
+                                {project?.technologies?.map((technology, index) => (
+                                    <li key={index}>- {technology.name}</li>
                                 ))}
                             </ul>
                         </div>

@@ -8,9 +8,9 @@ import "./Statistics.css";
 
 const Statistics = () => {
     return (
-        <div class="stats w-full stats-vertical lg:stats-horizontal shadow statistics-background">
+        <div className="stats w-full stats-vertical lg:stats-horizontal shadow statistics-background">
 
-            <div class="stat place-items-center">
+            <div className="stat place-items-center">
                 <div className="icons stat-title">
                     <BiWorld
                         style={{ fontSize: "5rem", color: "#fff" }}
@@ -22,11 +22,11 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title text-2xl text-blue-400">Countries</div>
+                <div className="stat-title text-2xl text-blue-400">Countries</div>
             </div>
 
 
-            <div class="stat place-items-center">
+            <div className="stat place-items-center">
                 <div className="icons stat-title">
                     <FaShoppingBasket
                         style={{ fontSize: "5rem", color: "#fff" }}
@@ -38,11 +38,11 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title text-2xl text-yellow-400">Products</div>
+                <div className="stat-title text-2xl text-yellow-400">Products</div>
             </div>
 
 
-            <div class="stat place-items-center">
+            <div className="stat place-items-center">
                 <div className="icons stat-title">
                     <BsFillPeopleFill
                         style={{ fontSize: "5rem", color: "#fff" }}
@@ -54,11 +54,11 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title text-2xl text-green-400">Happy Clients</div>
+                <div className="stat-title text-2xl text-green-400">Happy Clients</div>
             </div>
 
 
-            <div class="stat place-items-center">
+            <div className="stat place-items-center">
                 <div className="icons stat-title">
                     <VscFeedback
                         style={{ fontSize: "5rem", color: "#fff" }}
@@ -70,7 +70,7 @@ const Statistics = () => {
                     </span>
                     +
                 </div>
-                <div class="stat-title text-2xl text-red-400">Reviews</div>
+                <div className="stat-title text-2xl text-red-400">Reviews</div>
             </div>
 
         </div>

@@ -10,7 +10,7 @@ const AddReview = () => {
         <input
           type="text"
           placeholder="Your Name"
-          class="input input-bordered w-full max-w-sm"
+          className="input input-bordered w-full max-w-sm"
         />
         <label className="label">
           <span className="label-text">Company’s name, Designation</span>
@@ -18,13 +18,13 @@ const AddReview = () => {
         <input
           type="text"
           placeholder="Company’s name, Designation"
-          class="input input-bordered w-full max-w-sm"
+          className="input input-bordered w-full max-w-sm"
         />
         <label className="label">
           <span className="label-text">Description</span>
         </label>
         <textarea
-          class="textarea textarea-bordered w-full pb-12 max-w-sm"
+          className="textarea textarea-bordered w-full pb-12 max-w-sm"
           placeholder="Description"
         ></textarea>
       </div>
