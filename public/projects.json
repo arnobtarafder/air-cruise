@@ -38,6 +38,7 @@
         { "name": "Stripe Payment" }
       ],
       "github": "https://github.com/arnobtarafder/medico-healer",
+      "server": "https://github.com/arnobtarafder/medico-healer-server",
       "website": "https://medico-healer.web.app/",
       "status": "featured"
     }, 

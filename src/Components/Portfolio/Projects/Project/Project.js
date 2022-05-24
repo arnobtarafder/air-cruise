@@ -39,14 +39,14 @@ const Project = () => {
                                 >
                                     Git Client
                                 </a>
-                                <a
-                                    href={project.gitServer}
+                                {project.server && <a
+                                    href={project.server}
                                     rel="noreferrer"
                                     target={"_blank"}
                                     className="btn btn-primary text-white btn-sm font-mono"
                                 >
                                     Git Server
-                                </a>
+                                </a>}
                             </div>
 
                             <p className="font-bold antialiased hover:italic pt-2 max-h-1 pb-4 font-mono">Features:</p>
