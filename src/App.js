@@ -10,6 +10,8 @@ import SignIn from './Pages/Login';
 import SignUp from './Pages/Registration';
 import ResetPassword from './Components/Authentication/ResetPassword/ResetPassword';
 import Portfolio from './Pages/Portfolio';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -25,6 +27,12 @@ const override = css`
 
 
 function App() {
+
+  useEffect(() => {
+    AOS?.init();
+  }, []);
+
+
   const [theme, setTheme] = useState(false);
   const [loading, setLoading] = useState(false);
 

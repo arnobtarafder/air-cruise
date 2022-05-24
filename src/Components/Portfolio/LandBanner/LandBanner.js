@@ -2,9 +2,9 @@ import React from 'react';
 import { BsGithub, BsGoogle, BsLinkedin } from 'react-icons/bs';
 
 const LandBanner = () => {
-    return (
-        <div>
-            <div className="hero min-h-screen">
+  return (
+    <div>
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://zipgrip-tooling.web.app/static/media/developer.d33781fae61329526ad2.png"
@@ -20,7 +20,7 @@ const LandBanner = () => {
                 alt="handShake"
               />
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold">Mahir Al Kamal</h1>
+            <h1 className="text-4xl lg:text-6xl font-bold">Rafid Mahmud Tarafder</h1>
             <p className="py-6 text-2xl">
               A driven individual that thrives on working on end-to-end products
               that generate sustainable and scalable social and technical
@@ -52,19 +52,11 @@ const LandBanner = () => {
                 <BsGoogle className="  text-white" />
               </a>
             </div>
-            <a
-              href="https://drive.google.com/file/d/1MsF2pU1tY8Ik7U-2kyWo-A3a_TZKLbpZ/view?usp=sharing"
-              rel="noreferrer"
-              target={"_blank"}
-              className="btn bg-gradient-to-r from-secondary to-primary text-white mt-2"
-            >
-              See My Resume
-            </a>
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default LandBanner;

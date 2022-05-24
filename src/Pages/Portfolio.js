@@ -4,29 +4,29 @@ import Skills from "../Components/Portfolio/Skills/Skills";
 import Project from "../Components/Portfolio/Projects/Project/Project";
 
 const Portfolio = () => {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-        fetch("projects.json")
-            .then((res) => res.json())
-            .then((data) => setProjects(data));
-    }, []);
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    fetch("projects.json")
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
 
 
-    return (
-        <div className=" bg-[#eff0f3]">
+  return (
+    <div className=" bg-[#eff0f3]">
 
-            <LandBanner />
+      <LandBanner />
 
-            <Skills />
+      <Skills />
 
-            <Project />
+      <Project />
 
 
-            <div className="max-w-7xl mx-auto mb-20 px-6">
+      {/* <div className="max-w-7xl mx-auto mb-20 px-6">
                 <h3 className="text-2xl lg:text-4xl mb-10">
                     <span className="font-semibold ">Educational.</span> background
-                </h3>
-                {/* <div className="card lg:card-side bg-base-100">
+                </h3> */}
+      {/* <div className="card lg:card-side bg-base-100">
           <div className="avatar justify-center md:justify-start">
             <div className="w-52 rounded-xl p-5">
               <img src="http://eusc.edu.bd/media/logos/qMPXEAczusk44bZa27MytL21UhALI8HykceMjbkl.png" alt="iub" />
@@ -41,9 +41,9 @@ const Portfolio = () => {
             <p>Jan'-Sep'21</p>
           </div>
         </div> */}
-            </div>
-        </div>
-    );
+      {/* </div> */}
+    </div>
+  );
 };
 
 export default Portfolio;
