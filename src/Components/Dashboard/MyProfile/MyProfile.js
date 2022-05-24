@@ -35,11 +35,11 @@ const MyProfile = () => {
   );
 
   if (isLoading || loading) {
-    return <Loading></Loading>;
+    return <Loading />;
   }
 
   if (updateLoading) {
-    return <Updating></Updating>;
+    return <Updating />;
   }
 
   const imgbbAPIkey = "18a71459c4944f29646f860968c71813";
