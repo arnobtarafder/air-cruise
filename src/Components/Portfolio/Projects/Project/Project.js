@@ -13,21 +13,21 @@ const Project = () => {
     return (
         <section>
 
-            <h3 className=" text-2xl lg:text-4xl text-center my-20">
-                <span className="font-semibold ">Personal.</span> Projects
+            <h3 className=" text-3xl lg:text-4xl text-center my-20 underline">
+                <span className="font-semibold">Projects</span>
             </h3>
             <div className="max-w-7xl mx-auto mb-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 {projects?.map((project, index) => (
                     <div key={index} className="card w-full bg-base-100">
                         <div className="card-body">
                             <h2 className="card-title text-2xl">{project.name}</h2>
-                            <p className="text-xl">{project.type}</p>
+                            <p className="text-xl max-h-8 font-mono">{project.type}</p>
                             <div className="flex flex-wrap gap-2">
                                 <a
                                     href={project.website}
                                     rel="noreferrer"
                                     target={"_blank"}
-                                    className="btn btn-primary text-white btn-sm"
+                                    className="btn btn-primary text-white btn-sm font-mono"
                                 >
                                     Live Site
                                 </a>
@@ -35,7 +35,7 @@ const Project = () => {
                                     href={project.github}
                                     rel="noreferrer"
                                     target={"_blank"}
-                                    className="btn btn-primary text-white btn-sm"
+                                    className="btn btn-primary text-white btn-sm font-mono"
                                 >
                                     Git Client
                                 </a>
@@ -43,19 +43,20 @@ const Project = () => {
                                     href={project.gitServer}
                                     rel="noreferrer"
                                     target={"_blank"}
-                                    className="btn btn-primary text-white btn-sm"
+                                    className="btn btn-primary text-white btn-sm font-mono"
                                 >
                                     Git Server
                                 </a>
                             </div>
-                            
-                            <p className="text-bold">Features:</p>
+
+                            <p className="font-bold antialiased hover:italic pt-2 max-h-1 pb-4 font-mono">Features:</p>
                             <ul>
                                 {project?.features?.map((feature, index) => (
                                     <li key={index}>- {feature.name}</li>
                                 ))}
                             </ul>
-                            <p className="text-bold">Technologies Used:</p>
+
+                            <p className="font-bold antialiased hover:italic pt-2 max-h-1 pb-4 font-mono">Technologies Used:</p>
                             <ul>
                                 {project?.technologies?.map((technology, index) => (
                                     <li key={index}>- {technology.name}</li>
