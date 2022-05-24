@@ -45,7 +45,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           }
           to="/portfolio"
         >
-          Our Portfolio
+          Portfolio
         </NavLink>
       </li>
       <li>
