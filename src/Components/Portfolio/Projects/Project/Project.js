@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 
-
 const Project = () => {
     const [projects, setProjects] = useState([]);
 
@@ -18,7 +17,7 @@ const Project = () => {
                 <span className="font-semibold ">Personal.</span> Projects
             </h3>
             <div className="max-w-7xl mx-auto mb-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projects.map((project) => (
+                {projects?.map((project) => (
                     <div key={project._id} className="card w-full bg-base-100">
                         <div className="card-body">
                             <h2 className="card-title text-2xl">{project.name}</h2>
@@ -51,13 +50,13 @@ const Project = () => {
                             </div>
                             <p className="text-bold">Features:</p>
                             <ul>
-                                {project.features.map((feature) => (
+                                {project?.features?.map((feature) => (
                                     <li key={feature._tid}>- {feature.name}</li>
                                 ))}
                             </ul>
                             <p className="text-bold">Technologies Used:</p>
                             <ul>
-                                {project.technologies.map((technology) => (
+                                {project?.technologies?.map((technology) => (
                                     <li key={technology._uid}>- {technology.name}</li>
                                 ))}
                             </ul>
