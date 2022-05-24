@@ -15,7 +15,7 @@ import {
   faXmarkCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Updating from "../Shared/Updating/Updating";
+import Updating from "../../General/Updating/Updating";
 
 const MyProfile = () => {
   const [editProfile, setEditProfile] = useState(false);
