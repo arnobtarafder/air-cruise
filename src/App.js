@@ -88,7 +88,8 @@ function App() {
         <Route path='/portfolio' element={<Portfolio />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/contact' element={<ContactUs />}></Route>
-        <Route path='*' element={<NotFound />}></Route>
+        {/* <Route path='/contact' element={<ContactUs />}></Route> */}
+        
 
 
         <Route
@@ -112,10 +113,11 @@ function App() {
           ></Route>
         </Route>
 
-        
+        <Route path='*' element={<NotFound />}></Route>
+
       </Routes>
 
-      <Footer/>
+      <Footer />
 
     </div>
   );

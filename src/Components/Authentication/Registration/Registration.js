@@ -4,6 +4,13 @@ import {
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClipboardList,
+  faKey,
+  faEnvelope,
+  faFileSignature,
+} from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -52,15 +59,24 @@ const Registration = () => {
     await updateProfile({ displayName: data.name });
   };
   return (
-    <div className="flex h-screen justify-center items-center px-4 lg:px-12">
+    <div className="flex h-screen justify-center items-center px-4 lg:px-12 my-24" style={{
+      background: `url("https://www.airbus.com/sites/g/files/jlcbta136/files/styles/airbus_1440x1440/public/2022-04/screen_France_StMichel_PNeo3_20211115.jpg?itok=k6Fba1jG")`,
+      backgroundSize: "100%",
+    }}>
       <div className="card w-full max-w-md bg-base-100">
         <img src="{logo}" alt="" className="w-48 flex mx-auto" />
         <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Create an account</h2>
+          <h2 className="text-center text-2xl font-semibold mb-4">
+            <span className="mr-2">Register</span>
+            <FontAwesomeIcon icon={faClipboardList} />
+          </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-sm">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text font-light">
+                  <FontAwesomeIcon className="mr-2" icon={faFileSignature} />
+                  Name
+                </span>
               </label>
               <input
                 type="text"
@@ -84,7 +100,10 @@ const Registration = () => {
 
             <div className="form-control w-full max-w-sm">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text font-light">
+                  <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
+                  Email
+                </span>
               </label>
               <input
                 type="email"
@@ -116,7 +135,10 @@ const Registration = () => {
             </div>
             <div className="form-control w-full max-w-sm">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text font-light">
+                  <FontAwesomeIcon className="mr-2" icon={faKey} />
+                  Password
+                </span>
               </label>
               <input
                 type="password"
