@@ -27,7 +27,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = (
-    <div className="z-50">
+    <>
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -135,7 +135,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           )}
         </button>
       </li>
-    </div>
+    </>
   );
 
 
