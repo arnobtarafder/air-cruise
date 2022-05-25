@@ -18,6 +18,7 @@ import MyProfile from './Components/Dashboard/MyProfile/MyProfile';
 import MyOrders from './Components/Dashboard/MyOrders/MyOrders';
 import AddReview from './Components/Dashboard/AddReview/AddReview';
 import MakeAdmin from './Components/Dashboard/ADMIN/MakeAdmin/MakeAdmin';
+import Blog from './Pages/Blog';
 
 
 
@@ -83,6 +84,7 @@ function App() {
         <Route path='/reset-password' element={<ResetPassword />}></Route>
         {/* <Route path='/portfolio' element={<Portfolio />}></Route> */}
         <Route path='/portfolio' element={<Portfolio />}></Route>
+        <Route path='/blog' element={<Blog />}></Route>
 
 
         <Route

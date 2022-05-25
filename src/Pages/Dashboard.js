@@ -16,7 +16,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="drawer drawer-mobile max-w-7xl mx-auto">
+        <div className="drawer drawer-mobile max-w-7xl mx-auto mt-24">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content px-6 lg:my-6">
                 <div className="flex justify-between items-center">

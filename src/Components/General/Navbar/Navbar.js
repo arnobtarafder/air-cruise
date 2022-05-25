@@ -24,7 +24,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
     });
   };
 
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = (
     <>
@@ -36,6 +36,16 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           to="/"
         >
           Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary text-white rounded" : "rounded lg:mx-2"
+          }
+          to="/blog"
+        >
+          Blog
         </NavLink>
       </li>
       <li>
@@ -134,9 +144,8 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
       <div className="fixed top-0 w-full z-50">
         <input type="checkbox" className="drawer-toggle" />
         <div
-          className={`drawer-content flex flex-col py-[8px] lg:py-[10px] backdrop-blur-[18px] bg-base-200  ${
-            scrollY < 300 && "lg:bg-transparent"
-          }`}
+          className={`drawer-content flex flex-col py-[8px] lg:py-[10px] backdrop-blur-[18px] bg-base-200  ${scrollY < 300 && "lg:bg-transparent"
+            }`}
         >
           <div className="w-full navbar container mx-auto">
             <div className="navbar-start w-20">
@@ -183,9 +192,8 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           </div>
         </div>
         <div
-          className={`absolute duration-300 ease-linear ${
-            menuOpen ? "right-0" : "right-[-100vw]"
-          }`}
+          className={`absolute duration-300 ease-linear ${menuOpen ? "right-0" : "right-[-100vw]"
+            }`}
         >
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
           <ul className="menu p-4 gap-4 overflow-y-auto w-80 font-bold h-screen backdrop-blur-[18px] bg-base-200">
