@@ -25,7 +25,7 @@ const Product = ({ product }) => {
                                 <span title={`${description}`}>...read more</span>
                             )}
                         </p>
-                        <p className='mb-1'>Minimum Order Quantity: {min_order_quantity}</p>
+                        <p className='mb-1'>Minimum Order Quantity: 100</p>
                         <p className='mb-1'>Available Quantity: {available_quantity}</p>
                         <p className='card-text text-primary font-bold'>Price (per unit): ${per_unit_price}</p>
                     </div>

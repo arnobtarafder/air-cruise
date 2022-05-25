@@ -20,6 +20,7 @@ import MakeAdmin from './Components/Dashboard/ADMIN/MakeAdmin/MakeAdmin';
 import Blog from './Pages/Blog';
 import ContactUs from './Components/ContactUs/ContactUs';
 import PrivateAuth from "./Components/Authentication/PrivateAuth/PrivateAuth"
+import NotFound from './Components/General/NotFound/NotFound';
 
 
 
@@ -87,6 +88,7 @@ function App() {
         <Route path='/portfolio' element={<Portfolio />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/contact' element={<ContactUs />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
 
 
         <Route
