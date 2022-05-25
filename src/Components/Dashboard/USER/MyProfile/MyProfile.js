@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useQuery } from "react-query";
-import auth from "../../../firebase.init";
-import Loading from "../../General/Loading/Loading";
+import auth from "../../../../firebase.init";
+import Loading from "../../../General/Loading/Loading";
 import "./MyProfile.css";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,7 @@ import {
   faXmarkCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Updating from "../../General/Update/Update";
+import Updating from "../../../General/Update/Update";
 
 const MyProfile = () => {
   const [editProfile, setEditProfile] = useState(false);

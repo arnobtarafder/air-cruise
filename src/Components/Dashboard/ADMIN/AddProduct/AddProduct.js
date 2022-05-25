@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddService = () => {
+const AddProduct = () => {
   return (
     <div className="px-10 py-10 bg-base-300 h-screen rounded-md">
       <div className="bg-base-100 pl-8 pb-28 py-8 rounded-xl">
@@ -41,4 +41,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default AddProduct;
