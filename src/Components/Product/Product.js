@@ -12,7 +12,7 @@ const Product = ({ product }) => {
 
     return (
         <div>
-            <div id='tools' className="card w-full bg-base-100 shadow-xl">
+            <div id='tools' className="card w-full h-full bg-base-100 shadow-xl">
                 <figure>
                     <img src={image} alt="tool" className="rounded-xl" />
                 </figure>
@@ -29,7 +29,7 @@ const Product = ({ product }) => {
                         <p className='mb-1'>Available Quantity: {available_quantity}</p>
                         <p className='card-text text-primary font-bold'>Price (per unit): ${per_unit_price}</p>
                     </div>
-                    <div className="card-actions">
+                    <div className="card-actions mt-auto">
                         <button
                             onClick={() => navigateToUpdate(_id)}
                             className="btn btn-primary flex mx-auto mt-4 text-white rounded"

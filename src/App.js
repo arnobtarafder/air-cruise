@@ -12,7 +12,6 @@ import ResetPassword from './Components/Authentication/ResetPassword/ResetPasswo
 import Portfolio from './Pages/Portfolio';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PrivateAuth from './Components/General/PrivateAuth/PrivateAuth';
 import Dashboard from './Pages/Dashboard';
 import MyProfile from './Components/Dashboard/USER/MyProfile/MyProfile';
 import MyOrders from './Components/Dashboard/USER/MyOrders/MyOrders';
@@ -20,6 +19,7 @@ import AddReview from './Components/Dashboard/USER/AddReview/AddReview';
 import MakeAdmin from './Components/Dashboard/ADMIN/MakeAdmin/MakeAdmin';
 import Blog from './Pages/Blog';
 import ContactUs from './Components/ContactUs/ContactUs';
+import PrivateAuth from "./Components/Authentication/PrivateAuth/PrivateAuth"
 
 
 
