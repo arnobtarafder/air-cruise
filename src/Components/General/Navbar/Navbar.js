@@ -27,7 +27,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = (
-    <>
+    <div className="z-50">
       <li>
         <NavLink
           className={({ isActive }) =>
@@ -135,12 +135,12 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           )}
         </button>
       </li>
-    </>
+    </div>
   );
 
 
   return (
-    <section className="flex justify-center mb-8">
+    <section className="flex justify-center mb-8 z-50">
       <div className="fixed top-0 w-full z-50">
         <input type="checkbox" className="drawer-toggle" />
         <div
