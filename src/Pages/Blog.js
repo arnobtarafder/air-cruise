@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='mb-32'>
+        <div className='my-32'>
             <div className='card bg-base-200 shadow-xl mb-10'>
                 <div className='card-body'>
                     <h3 className='card-title'>How will you improve the performance of a React Application?</h3>
