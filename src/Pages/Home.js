@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../Components/Home/Banner/Banner';
-// import Contact from '../Components/Home/Contact/Contact';
+import Contact from '../Components/Home/Contact/Contact';
 import Map from '../Components/Home/Map/Map';
 import Review from '../Components/Home/Reviews/Review';
 import Reviews from '../Components/Home/Reviews/Reviews';
@@ -10,10 +10,10 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <Statistics />
+            {/* <Statistics /> */}
             <Review />
             <Map />
-            {/* <Contact /> */}
+            <Contact />
         </div>
     );
 };
