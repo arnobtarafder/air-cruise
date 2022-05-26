@@ -2,38 +2,40 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
-    const { _id, image, name, price, description, min_order_quantity, available_quantity, per_unit_price } = product;
+    const { _id, name, description, available, minimum, price, image } = product;
+
     const navigate = useNavigate();
 
 
-    const navigateToUpdate = (id) => {
-        navigate(`/purchase/${id}`);
-    };
 
     return (
         <div>
-            <div id='tools' className="card w-full h-full bg-base-100 shadow-xl">
-                <figure>
-                    <img src={image} alt="tool" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title text-3xl mb-5">{name}</h2>
-                    <div className='text-left text-xl mb-5'>
-                        <p className='card-text mb-6 leading-relaxed'>
-                            {description?.slice(0, 80)}
-                            {description?.length > 100 && (
-                                <span title={`${description}`}>...read more</span>
-                            )}
-                        </p>
-                        <p className='mb-1'>Minimum Order Quantity: 100</p>
-                        <p className='mb-1'>Available Quantity: {available_quantity}</p>
-                        <p className='card-text text-primary font-bold'>Price (per unit): ${per_unit_price}</p>
-                    </div>
-                    <div className="card-actions mt-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-5 bg-base-100 hover:bg-[#eff0f3] hover:shadow-xl rounded-xl">
+                <div className="pb-5 lg:pb-0 lg:pr-5 flex justify-center">
+                    <img src={image} alt="img" className="rounded-xl" />
+                </div>
+                <div className="relative">
+                    <h2 className="text-xl font-bold">{name}</h2>
+                    <p className="my-2">{description}</p>
+                    <p>
+                        Available Quantity: <span className="font-bold">{available}</span>
+                    </p>
+                    <p>
+                        Minimum Order Quantity: <span className="font-bold">{minimum}</span>
+                    </p>
+                    <p>
+                        Price: $<span className="font-bold">{price}</span>/unit
+                    </p>
+                    <br />
+                    <br />
+                    <br />
+                    <div className="absolute bottom-0 right-0">
                         <button
-                            onClick={() => navigateToUpdate(_id)}
-                            className="btn btn-primary flex mx-auto mt-4 text-white rounded"
-                        >Buy Now</button>
+                            onClick={() => navigate(`/purchase/${_id}`)}
+                            className="btn bg-gradient-to-r from-secondary to-primary text-white"
+                        >
+                            Place Order
+                        </button>
                     </div>
                 </div>
             </div>

@@ -74,7 +74,7 @@ const Purchase = () => {
           if (res.status === 200) {
             setAdding(false);
             Swal.fire({
-              title: "Order Has been place.",
+              title: "Order Has been placed.",
               text: "Please complete payment to confirm your order",
               icon: "success",
               confirmButtonText: "Proceed",
@@ -128,7 +128,7 @@ const Purchase = () => {
 
   return (
     <div>
-      <div className="my-10 px-6 lg:px-0 max-w-7xl mx-auto">
+      <div className="my-24 px-6 lg:px-0 max-w-7xl mx-auto">
         <h2 className="text-2xl text-secondary font-bold">Complete Order</h2>
         <h3 className="text-3xl">Please fill necessary information</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 p-5 bg-[#eff0f3] shadow-xl rounded-xl my-10 items-center">
