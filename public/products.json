@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Airspeed Indicators",
+        "price": "280",
+        "description": "The airspeed indicator (ASI) or airspeed gauge is a flight instrument indicating the airspeed of an aircraft in kilometers per hour (km/h), knots (kn), miles per hour (MPH) and/or meters per second (m/s). The recommendation by ICAO is to use km/h, however knots is currently the most used unit. The ASI measures the pressure differential between static pressure from the static port, and total pressure from the pitot tube. This difference in pressure is registered with the ASI pointer on the face of the instrument",
+        "img": "https://www.mcico.com/img/category/en/OE_Airspeed_Indicators.gif?fv=0677F7FE63C45F272D979C26016B7E51-6821"
+    },
+    {
+        "id": 2,
+        "name": "Altimeters",
+        "price": "400",
+        "description": "An altimeter or an altitude meter is an instrument used to measure the altitude of an object above a fixed level. The measurement of altitude is called altimetry, which is related to the term bathymetry, the measurement of depth under water. The most common unit for altimeter calibration worldwide is hectopascals (hPa), except for North America and Japan where inches of mercury (inHg) are used.[1] To obtain an accurate altitude reading in either feet or meters, the local barometric pressure must be calibrated correctly.",
+        "img": "https://www.mcico.com/img/category/OE_Altimeters.gif?fv=81DE630F1D61866BF0209F5CAB893BE2-7256"
+    },
+    {
+        "id": 3,
+        "name": "Attitude Indicators",
+        "price": "3700",
+        "description": "The attitude indicator (AI), formerly known as the gyro horizon or artificial horizon, is a flight instrument that informs the pilot of the aircraft orientation relative to Earth's horizon, and gives an immediate indication of the smallest orientation change. The miniature aircraft and horizon bar mimic the relationship of the aircraft relative to the actual horizon.[1][2] It is a primary instrument for flight in instrument meteorological conditions.",
+        "img": "https://www.mcico.com/img/category/OE_Attitude_Indicators.gif?fv=7D4FC9BFF6EA4EF8AB2505421F7AFBE2-6110"
+    },
+    {
+        "id": 4,
+        "name": "Batteries",
+        "price": "1400000",
+        "description": "Lead acid batteries are often used as the main battery(s) in an aircraft. Nickel Cadmium (NiCd). Nickel-cadmium cells have an anode made of cadmium hydroxide and a cathode of nickel hydroxide that are immersed in an electrolyte made up of potassium, sodium and lithium hydroxides.",
+        "img": "https://www.mcico.com/img/category/OE_Batteries.gif?fv=4DD19D84ED3C9ECB8647D2A537C4CCB1-4601"
+    },
+    {
+        "id": 5,
+        "name": "Computer Amplifiers",
+        "price": "110",
+        "description": "Most autopilot systems consist of four basic components, plus various switches and auxiliary units. The four basic components are: sensing elements, computing element, output elements, and command elements. Many advanced autopilot systems contain a fifth element: feedback or follow-up. This refers to signals sent as corrections are being made by the output elements to advise the autopilot of the progress being made. [Figure 1]",
+        "img": "https://www.mcico.com/img/category/OE_Computer_Amplifiers.gif?fv=559EBF6A1AA75DD731849D792B089C91-5813"
+    },
+    {
+        "id": 6,
+        "name": "Miscellaneous Indicators",
+        "price": "610",
+        "description": "The metalinguistic negation cmavo na'i and its opposite jo'a are explained in full in Chapter 15. In general, na'i indicates that there is something wrong with a piece of discourse: either an error, or a false underlying assumption, or something else of the sort. The discourse is invalid or inappropriate due to the marked word or construct.",
+        "img": "https://www.mcico.com/img/category/OE_Miscellaneous_Indicators.gif?fv=EC7763BF9B3106C52BFAAF61B7EE73B9-5574"
+    },
+    {
+        "id": 7,
+        "name": "Nav/Comms",
+        "price": "4600",
+        "description": "Operate and maintain communication, navigation and mission systems · Diagnose malfunctions using schematics and wiring diagrams · Inspect and verify operational. 2A8X1 Mobility Air Forces Integrated Communication Navigation Mission Systems Duties: Analyzes malfunctions, inspects, removes, maintains, and installs",
+        "img": "https://www.mcico.com/img/category/OE_Nav-Comms.gif?fv=7D2A0E53DDD8E281B0A9E72B4653D61D-5436"
+    },
+    {
+        "id": 8,
+        "name": "Weather Radar",
+        "price": "19489",
+        "description": "Airborne weather radar is a type of radar used to provide an indication to pilots of the intensity of convective weather. Modern weather radars are mostly doppler radars, capable of detecting the motion of rain droplets in addition to intensity of the precipitation. Typically, the radar antenna is located in the nose of the aircraft. Signals from the antenna are processed by a computer and presented on a screen which may be viewed by the pilots. Droplet size is a good indicator of strong updrafts within cumulonimbus clouds, and associated turbulence, and is indicated on the screen by patterns, colour coded for intensity.",
+        "img": "https://www.mcico.com/img/category/OE_Radar_Transmitters.gif?fv=4CC3014F05F909935BC096387610E0F1-5029"
+    },
+    {
+        "id": 9,
+        "name": "Encoders",
+        "price": "370",
+        "description": "Aircraft encoders are used to connect an altimeter to a transponder. Thanks to this instrument, the air traffic control will have a precise information about your position. We offer high quality aircraft altitude encoders, for example a model ACK-A-30.5.",
+        "img": "https://www.mcico.com/img/category/OE_Encoders.gif?fv=51729CC80FEEA2102267A67BBDEE1057-4891"
+    },
+      {
+        "id": 10,
+        "name": "GPS Receivers",
+        "price": "11000",
+        "description": "The aircraft GPS receiver measures distance from a satellite using the travel time of a radio signal. Each satellite transmits a specific code, called a course/acquisition (CA) code, which contains information on the satellite's position, the GPS system time, and the health and accuracy of the transmitted data.",
+        "img": "https://www.mcico.com/img/category/OE_Encoders.gif?fv=51729CC80FEEA2102267A67BBDEE1057-4891"
+    },
+    {
+        "id": 11,
+        "name": "Clocks",
+        "price": "57",
+        "description": "Whether called a clock or a chronometer, an FAA-approved time indicator is required in the cockpit of IFR-certified aircraft. Pilots use a clock during flight to time maneuvers and for navigational purposes.",
+        "img": "https://www.mcico.com/img/category/OE_Clocks.gif?fv=48F14E05929BEDDF7A4C7941414F3C56-7203"
+    }
+]
