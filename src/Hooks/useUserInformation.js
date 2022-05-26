@@ -9,7 +9,7 @@ const useUserInformation = (user) => {
     fetch(`https://zipgrip-tooling.herokuapp.com/profile/${user.email}`, {
       method: "GET",
       headers: {
-        authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );
