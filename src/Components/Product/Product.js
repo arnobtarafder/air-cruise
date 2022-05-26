@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
-    const { _id, name, description, available, minimum, price, image } = product;
+    const { _id, name, description, available, minimum, price, img } = product;
 
     const navigate = useNavigate();
 
@@ -12,16 +12,16 @@ const Product = ({ product }) => {
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-5 bg-base-100 hover:bg-[#eff0f3] hover:shadow-xl rounded-xl">
                 <div className="pb-5 lg:pb-0 lg:pr-5 flex justify-center">
-                    <img src={image} alt="img" className="rounded-xl" />
+                    <img src={img} alt="img" className="rounded-xl" />
                 </div>
                 <div className="relative">
                     <h2 className="text-xl font-bold">{name}</h2>
-                    <p className="my-2">{description}</p>
+                    <p className="my-2">{description.length < 100 ? description : description.slice(0, 100) + "...read more"}</p>
                     <p>
                         Available Quantity: <span className="font-bold">{available}</span>
                     </p>
                     <p>
-                        Minimum Order Quantity: <span className="font-bold">50</span>
+                        Minimum Order Quantity: <span className="font-bold">{minimum}</span>
                     </p>
                     <p>
                         Price: $<span className="font-bold">{price}</span>/unit

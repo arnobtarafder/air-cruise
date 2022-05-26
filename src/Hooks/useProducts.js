@@ -4,7 +4,7 @@ const useProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://zipgrip-tooling.herokuapp.com/product/${"home"}`, {
+    fetch(`http://localhost:5000/products`, {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

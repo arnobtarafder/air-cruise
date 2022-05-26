@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -18,7 +17,7 @@ const Purchase = () => {
   const [adding, setAdding] = useState(false);
 
   const { data: product, isLoading } = useQuery(["singleProduct", id], () =>
-    fetch(`https://zipgrip-tooling.herokuapp.com/product/singleProduct/${id}`, {
+    fetch(`http://localhost:5000/products/singleProduct/${id}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -133,7 +132,7 @@ const Purchase = () => {
         <h3 className="text-3xl">Please fill necessary information</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 p-5 bg-[#eff0f3] shadow-xl rounded-xl my-10 items-center">
           <div className="mb-10 lg:mb-0 lg:p-10 w-md flex justify-center">
-            <img src={product.image} alt="img" className="rounded-xl" />
+            {/* <img src={product.img} alt="img" className="rounded-xl" /> */}
           </div>
           <div>
             <h2 className="text-xl lg:text-2xl font-bold">{product.name}</h2>
