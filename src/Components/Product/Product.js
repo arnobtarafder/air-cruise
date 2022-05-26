@@ -21,7 +21,7 @@ const Product = ({ product }) => {
                         Available Quantity: <span className="font-bold">{available}</span>
                     </p>
                     <p>
-                        Minimum Order Quantity: <span className="font-bold">{minimum}</span>
+                        Minimum Order Quantity: <span className="font-bold">50</span>
                     </p>
                     <p>
                         Price: $<span className="font-bold">{price}</span>/unit
