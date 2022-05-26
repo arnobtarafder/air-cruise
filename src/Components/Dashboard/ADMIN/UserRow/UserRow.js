@@ -12,6 +12,30 @@ const UserRow = ({ userInfo, index, refetch  }) => {
   const { email, role } = userInfo;
 
 
+  const makeAdmin = () => {
+    fetch(`http://localhost:5000/users/admin/${email}`, {
+        method: 'PUT',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
+        .then(res => {
+            if (res.status === 403) {
+                toast.error('Failed to Make an Admin');
+            }
+            return res.json()
+        })
+        .then(data => {
+            if (data.modifiedCount > 0) {
+                refetch();
+                toast.success(`Successfully Made an Admin`);
+            }
+
+        })
+}
+
+
+
   const handleDelete = (email) => {
     Swal.fire({
         text: "Are you sure you want to delete this?",
@@ -22,7 +46,7 @@ const UserRow = ({ userInfo, index, refetch  }) => {
         confirmButtonText: "Yes, Delete it!",
     }).then((result) => {
         if (result.value) {
-            fetch(`https://medico-healer.herokuapp.com/doctors/${email}`, {
+            fetch(`http://localhost:5000/users/admin/${email}`, {
                 method: "DELETE",
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -46,14 +70,14 @@ const UserRow = ({ userInfo, index, refetch  }) => {
     <tr>
       <th>{index + 1}</th>
       <td>{email}</td>
-      <td>{role}</td>
+      <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
       <td>
         <label
           onClick={() => handleDelete(userInfo)}
           htmlFor="user-delete-confirm-modal"
           className="btn btn-xs btn-primary text-white"
         >
-          Delete User
+          Remove User
         </label>
       </td>
     </tr>

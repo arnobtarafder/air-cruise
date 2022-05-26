@@ -26,6 +26,7 @@ import AddProduct from './Components/Dashboard/ADMIN/AddProduct/AddProduct';
 import ManageProduct from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
 import Purchase from './Components/Purchase/Purchase';
 import Users from './Components/Dashboard/ADMIN/Users/Users';
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -94,7 +95,7 @@ function App() {
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/contact' element={<ContactUs />}></Route>
         {/* <Route path='/contact' element={<ContactUs />}></Route> */}
-        
+
         <Route
           path="/purchase/:id"
           element={
@@ -120,19 +121,19 @@ function App() {
             path="makeAdmin"
             element={
               // <RequireAdmin>
-                <MakeAdmin></MakeAdmin>
+              <MakeAdmin></MakeAdmin>
               // </RequireAdmin>
             }
           ></Route>
-           <Route
+          <Route
             path="users"
             element={
               // <RequireAdmin>
-                <Users></Users>
+              <Users></Users>
               // </RequireAdmin>
             }
           ></Route>
-           <Route
+          <Route
             path="addProduct"
             element={
               <RequireAdmin>
@@ -153,6 +154,12 @@ function App() {
         <Route path='*' element={<NotFound />}></Route>
 
       </Routes>
+
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
+
 
       <Footer />
 
