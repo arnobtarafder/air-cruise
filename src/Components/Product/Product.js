@@ -7,7 +7,7 @@ const Product = ({ product }) => {
 
 
     const navigateToUpdate = (id) => {
-        navigate(`/tools/${id}`);
+        navigate(`/purchase/${id}`);
     };
 
     return (

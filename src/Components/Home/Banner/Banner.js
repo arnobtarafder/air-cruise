@@ -15,7 +15,7 @@ const Banner = () => {
                     <p className="py-12 leading-loose">
                         With the goal of developing advanced air mobility in Germany, leading companies, universities, research institutions and municipalities are joining forces under the leadership of Airbus to form the Air Mobility Initiative (AMI).</p>
                     <button className="btn btn-primary text-white rounded px-10">
-                        Get an Appointment
+                        Explore Now
                     </button>
                 </div>
             </div>

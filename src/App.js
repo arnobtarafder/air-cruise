@@ -24,6 +24,7 @@ import NotFound from './Components/General/NotFound/NotFound';
 import RequireAdmin from './Components/Dashboard/RequireAdmin/RequireAdmin';
 import AddProduct from './Components/Dashboard/ADMIN/AddProduct/AddProduct';
 import ManageProduct from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
+import Purchase from './Components/Purchase/Purchase';
 
 
 
@@ -93,6 +94,14 @@ function App() {
         <Route path='/contact' element={<ContactUs />}></Route>
         {/* <Route path='/contact' element={<ContactUs />}></Route> */}
         
+        <Route
+          path="/purchase/:id"
+          element={
+            <PrivateAuth>
+              <Purchase></Purchase>
+            </PrivateAuth>
+          }
+        ></Route>
 
 
         <Route
