@@ -11,7 +11,7 @@ const SingleUser = ({ user, index, refetch }) => {
     fetch(`https://zipgrip-tooling.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
-        authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     })
       .then((res) => {

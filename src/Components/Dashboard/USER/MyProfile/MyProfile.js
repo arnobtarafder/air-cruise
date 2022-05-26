@@ -29,7 +29,7 @@ const MyProfile = () => {
     fetch(`https://zipgrip-tooling.herokuapp.com/profile/${user.email}`, {
       method: "GET",
       headers: {
-        authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );
@@ -73,7 +73,7 @@ const MyProfile = () => {
               method: "PUT",
               headers: {
                 "content-type": "application/json",
-                authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
               },
               body: JSON.stringify({ profilePicture: img }),
             }
@@ -113,7 +113,7 @@ const MyProfile = () => {
       method: "PUT",
       headers: {
         "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       body: JSON.stringify(profile),
     })
@@ -135,7 +135,7 @@ const MyProfile = () => {
         method: "PUT",
         headers: {
           "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
         body: JSON.stringify({
           profilePicture:
