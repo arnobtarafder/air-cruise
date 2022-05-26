@@ -1,5 +1,7 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
+
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -93,6 +95,7 @@ const CheckoutForm = ({ order }) => {
                 body: JSON.stringify(payment)
             }).then(res => res.json())
                 .then(data => {
+                    toast.success("Your payment is Confirmed!")
                     setProcessing(false);
                     console.log(data);
                 })
@@ -104,7 +107,7 @@ const CheckoutForm = ({ order }) => {
 
     return (
         <>
-            {/* <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
@@ -133,7 +136,7 @@ const CheckoutForm = ({ order }) => {
                     <p>{success}  </p>
                     <p>Your transaction Id: <span className="text-orange-500 font-bold">{transactionId}</span> </p>
                 </div>
-            } */}
+            }
         </>
     );
 };
