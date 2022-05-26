@@ -25,7 +25,6 @@ const ProfileUpdateModal = ({setOpenModal, refetch}) => {
                 if(data.acknowledged){
                     refetch()
                     setOpenModal(false)
-                
                 }
             });
     };

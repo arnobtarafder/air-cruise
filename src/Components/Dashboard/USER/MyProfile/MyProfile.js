@@ -31,9 +31,9 @@ const Profile = () => {
             <input type="text" value={user?.displayName} className="input w-full input-bordered " readOnly />
             <input type="email" value={user?.email} className="input my-3 w-full input-bordered " readOnly />
             <input type="text" name="age" value={dbuser?.birthDay} className="input w-full mb-3 input-bordered" readOnly />
-            <input type="text" name="institute" value={dbuser.institutte} className="input w-full input-bordered" readOnly />
-            <textarea name="presentAddress" className="textarea textarea-bordered my-3" value={dbuser.presentAddress} readOnly></textarea>
-            <textarea name="parmanentAddress" className="textarea textarea-bordered" value={dbuser.parmanentAddress} readOnly></textarea>
+            {/* <input type="text" name="institute" value={dbuser.institute} className="input w-full input-bordered" readOnly /> */}
+            {/* <textarea name="presentAddress" className="textarea textarea-bordered my-3" value={dbuser.presentAddress} readOnly></textarea> */}
+            {/* <textarea name="parmanentAddress" className="textarea textarea-bordered" value={dbuser.parmanentAddress} readOnly></textarea> */}
             </form>
             <label type="submit" value="Update" onClick={()=> setOpenModal(true)} for="profileModal" className="btn btn-primary mt-3">Edit Profile</label>
             {
