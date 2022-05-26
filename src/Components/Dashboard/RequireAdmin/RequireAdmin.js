@@ -2,7 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import auth from "../../Firebase/firebase.init";
+import auth from "../../../firebase.init";
 import useAdmin from "../../../Hooks/useAdmin";
 import Loading from "../../General/Loading/Loading";
 import { useQuery } from "react-query";

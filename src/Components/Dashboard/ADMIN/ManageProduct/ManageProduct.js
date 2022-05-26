@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
-import useProductsInformation from "../../Hooks/useProductsInformation";
+import useProductsInformation from "../../../../Hooks/useProductsInformation";
 import Loading from "../../../General/Loading/Loading";
 import SingleProduct from "./SingleProduct";
 

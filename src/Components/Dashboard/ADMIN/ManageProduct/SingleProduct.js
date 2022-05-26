@@ -21,7 +21,7 @@ const SingleProduct = ({ product, index, refetch }) => {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
-            authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         }).then((res) => {
           if (res.status === 200) {

@@ -21,6 +21,9 @@ import Blog from './Pages/Blog';
 import ContactUs from './Components/ContactUs/ContactUs';
 import PrivateAuth from "./Components/Authentication/PrivateAuth/PrivateAuth"
 import NotFound from './Components/General/NotFound/NotFound';
+import RequireAdmin from './Components/Dashboard/RequireAdmin/RequireAdmin';
+import AddProduct from './Components/Dashboard/ADMIN/AddProduct/AddProduct';
+import ManageProduct from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
 
 
 
@@ -106,9 +109,25 @@ function App() {
           <Route
             path="makeAdmin"
             element={
-              <PrivateAuth>
+              <RequireAdmin>
                 <MakeAdmin></MakeAdmin>
-              </PrivateAuth>
+              </RequireAdmin>
+            }
+          ></Route>
+           <Route
+            path="addProduct"
+            element={
+              <RequireAdmin>
+                <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageProduct"
+            element={
+              <RequireAdmin>
+                <ManageProduct></ManageProduct>
+              </RequireAdmin>
             }
           ></Route>
         </Route>

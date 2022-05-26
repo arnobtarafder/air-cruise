@@ -4,13 +4,13 @@ import "./InternetError.css"
 const InternetError = () => {
     return (
         <div>
-            {/* <div className='grid h-screen place-items-center text-xl font-semibold'>
+            <div className='grid h-screen place-items-center text-xl font-semibold'>
             <p>Failed To fetch data from the server. Please check your internet connection.</p>
-        </div> */}
+        </div>
 
 
 
-            <div class="main-error-page">
+            {/* <div class="main-error-page">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -352,7 +352,7 @@ const InternetError = () => {
                 </h2>
 
 
-            </div>
+            </div> */}
 
         </div>
     );

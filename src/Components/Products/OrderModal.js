@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import auth from "../../firebase.init";
 import Loading from "../General/Loading/Loading";
 

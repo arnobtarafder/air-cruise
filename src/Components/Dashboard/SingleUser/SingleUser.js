@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGear, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 const SingleUser = ({ user, index, refetch }) => {
   const { position, email } = user;
