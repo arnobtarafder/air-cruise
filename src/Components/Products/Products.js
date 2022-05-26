@@ -22,9 +22,9 @@ const Products = () => {
 
         <div className="flex justify-end items-center gap-5 my-5">
           {toggle ? (
-            <p className="font-semibold">Show Less Reviews</p>
+            <p className="font-semibold">Show Less Products</p>
           ) : (
-            <p className="font-semibold">Show All Reviews</p>
+            <p className="font-semibold">Show All Products</p>
           )}
           <input
             type="checkbox"
