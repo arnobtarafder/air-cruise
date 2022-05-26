@@ -38,7 +38,7 @@ const Products = () => {
             <>
               {
                 products?.map(product => (<Product
-                  key={products._id}
+                  key={products.id}
                   product={product}
                 >
                 </Product>
