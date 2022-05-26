@@ -33,7 +33,7 @@ const ProfileUpdateModal = ({setOpenModal, refetch}) => {
             <input type="checkbox" id="profileModal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                <label for="profileModal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                <label htmlFor="profileModal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <form className="flex flex-col w-full pt-6" onSubmit={handleProfile}>
                         <input
                             type="text"

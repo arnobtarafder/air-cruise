@@ -22,7 +22,7 @@ const DeleteOrderModal = ({ setOpenModal, orderId, refetch }) => {
                 <input type="checkbox" id="cancleConfirmation" className="modal-toggle" />
                 <div className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">
-                        <label for="cancleConfirmation" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <label htmlFor="cancleConfirmation" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                         <h3 className="font-bold text-lg">Are you sure want to cancle order?</h3>
                         <div className='flex justify-between mt-8'>
                             <button className='btn btn-md btn-success' onClick={handleCancleOrder}>YES</button>

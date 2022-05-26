@@ -35,7 +35,7 @@ const Profile = () => {
             {/* <textarea name="presentAddress" className="textarea textarea-bordered my-3" value={dbuser.presentAddress} readOnly></textarea> */}
             {/* <textarea name="parmanentAddress" className="textarea textarea-bordered" value={dbuser.parmanentAddress} readOnly></textarea> */}
             </form>
-            <label type="submit" value="Update" onClick={()=> setOpenModal(true)} for="profileModal" className="btn btn-primary mt-3">Edit Profile</label>
+            <label type="submit" value="Update" onClick={()=> setOpenModal(true)} htmlFor="profileModal" className="btn btn-primary mt-3">Edit Profile</label>
             {
                 openModal && <ProfileUpdateModal refetch={refetch} setOpenModal={setOpenModal} />
             }

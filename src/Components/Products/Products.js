@@ -38,7 +38,7 @@ const Products = () => {
             <>
               {
                 products?.map(product => (<Product
-                  key={products._id}
+                  key={product._id}
                   product={product}
                 >
                 </Product>
@@ -48,7 +48,7 @@ const Products = () => {
             <>
               {
                 products?.slice(-6)?.map(product => (<Product
-                  key={products._id}
+                  key={product._id}
                   product={product}
                 >
                 </Product>

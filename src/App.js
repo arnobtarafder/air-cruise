@@ -123,7 +123,7 @@ function App() {
               </RequireAdmin>
             }
           ></Route>
-           <Route
+           {/* <Route
             path="addProduct"
             element={
               <RequireAdmin>
@@ -138,7 +138,7 @@ function App() {
                 <ManageProduct></ManageProduct>
               </RequireAdmin>
             }
-          ></Route>
+          ></Route> */}
         </Route>
 
         <Route path='*' element={<NotFound />}></Route>

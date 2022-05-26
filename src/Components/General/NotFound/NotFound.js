@@ -6,35 +6,35 @@ const NotFound = () => {
     return (
         <div className='NotFound-Body'>
             <a href="https://codepen.io/uiswarup/full/yLzypyY" alt="">
-                <header class="top-header">
+                <header className="top-header">
                 </header>
 
                 <div>
-                    <div class="startsec"></div>
-                    <div class="starthird"></div>
-                    <div class="starfourth"></div>
-                    <div class="starfifth"></div>
+                    <div className="startsec"></div>
+                    <div className="starthird"></div>
+                    <div className="starfourth"></div>
+                    <div className="starfifth"></div>
                 </div>
 
 
-                <div class="lamp__wrap">
-                    <div class="lamp">
-                        <div class="cable"></div>
-                        <div class="cover"></div>
-                        <div class="in-cover">
-                            <div class="bulb"></div>
+                <div className="lamp__wrap">
+                    <div className="lamp">
+                        <div className="cable"></div>
+                        <div className="cover"></div>
+                        <div className="in-cover">
+                            <div className="bulb"></div>
                         </div>
-                        <div class="light"></div>
+                        <div className="light"></div>
                     </div>
                 </div>
-                <section class="NotFound-Error">
-                    <div class="NotFound-Error__content">
-                        <div class="NotFound-Error__message message">
-                            <h1 class="message__title">Page Not Found</h1>
-                            <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
+                <section className="NotFound-Error">
+                    <div className="NotFound-Error__content">
+                        <div className="NotFound-Error__message message">
+                            <h1 className="message__title">Page Not Found</h1>
+                            <p className="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
                         </div>
-                        <div class="NotFound-Error__nav e-nav">
-                            <Link to="/" class="e-nav__link" alt=""></Link>
+                        <div className="NotFound-Error__nav e-nav">
+                            <Link to="/" className="e-nav__link" alt=""></Link>
                         </div>
                     </div>
 

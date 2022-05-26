@@ -10,7 +10,7 @@ const InternetError = () => {
 
 
 
-            {/* <div class="main-error-page">
+            {/* <div className="main-error-page">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -114,7 +114,7 @@ const InternetError = () => {
                                 />
                             </g>
                             <path
-                                class="fio-500"
+                                className="fio-500"
                                 stroke="#2D3F5B"
                                 stroke-linecap="round"
                                 stroke-width="4"
@@ -128,14 +128,14 @@ const InternetError = () => {
                                     <use xlink:href="#prefix__m" />
                                 </mask>
                                 <path
-                                    class="fio"
+                                    className="fio"
                                     fill="#4B4B62"
                                     d="M-5.969 9.929L24.38 9.929 24.38 -5.973 -5.969 -5.973z"
                                     mask="url(#prefix__n)"
                                 />
                             </g>
 
-                            <path class="fio"
+                            <path className="fio"
                                 stroke="#2D3F5B"
                                 stroke-linecap="round"
                                 stroke-width="4"
@@ -143,7 +143,7 @@ const InternetError = () => {
                                 transform="translate(-448 -158) translate(448 157)"
                             />
 
-                            <g class="full-torradeira">
+                            <g className="full-torradeira">
                                 <g
                                     transform="translate(-448 -158) translate(448 157) translate(332.51 262.987)"
                                 >
@@ -193,7 +193,7 @@ const InternetError = () => {
                                     />
                                 </g>
 
-                                <g class="pao-atras">
+                                <g className="pao-atras">
                                     <g
                                         transform="translate(-448 -158) translate(448 157) translate(340.903 169.665)"
                                     >
@@ -220,7 +220,7 @@ const InternetError = () => {
                                     </g>
                                 </g>
 
-                                <g class="pao-frente">
+                                <g className="pao-frente">
                                     <g
                                         transform="translate(-448 -158) translate(448 157) translate(326.515 182.854)"
                                     >
@@ -254,7 +254,7 @@ const InternetError = () => {
                                             <use xlink:href="#prefix__y" />
                                         </mask>
                                         <path
-                                            class="olho-esq"
+                                            className="olho-esq"
                                             fill="#633"
                                             d="M-4.153 -6.995L12.298 -3.797 9.107 12.627 -7.346 9.429z"
                                             mask="url(#prefix__z)"
@@ -268,7 +268,7 @@ const InternetError = () => {
                                             <use xlink:href="#prefix__A" />
                                         </mask>
                                         <path
-                                            class="olho-dir"
+                                            className="olho-dir"
                                             fill="#633"
                                             d="M-4.248 -6.976L12.203 -3.778 9.011 12.645 -7.441 9.448z"
                                             mask="url(#prefix__B)"
@@ -282,7 +282,7 @@ const InternetError = () => {
                                             <use xlink:href="#prefix__C" />
                                         </mask>
                                         <path
-                                            class="boca"
+                                            className="boca"
                                             fill="#633"
                                             d="M-3.14 -7.546L17.993 -3.438 14.8 12.985 -6.333 8.878z"
                                             mask="url(#prefix__D)"
@@ -290,7 +290,7 @@ const InternetError = () => {
                                     </g>
                                 </g>
                                 <g
-                                    class="torradeira"
+                                    className="torradeira"
                                     transform="translate(-448 -158) translate(448 157) translate(325.316 218.624)"
                                 >
                                     <mask id="prefix__x" fill="#fff">
@@ -304,7 +304,7 @@ const InternetError = () => {
                                 </g>
                             </g>
                             <g
-                                class="raios"
+                                className="raios"
                                 stroke="#fdba55"
                                 stroke-linecap="round"
                                 stroke-width="1.8"
@@ -321,7 +321,7 @@ const InternetError = () => {
                                 <mask id="prefix__F" fill="#fff">
                                     <use xlink:href="#prefix__E" />
                                 </mask>
-                                <path class="tomada"
+                                <path className="tomada"
                                     fill="#2D3F5B"
                                     d="M10.383 -14.007L34.351 9.962 12.875 31.438 -11.095 7.469z"
                                     mask="url(#prefix__F)"
@@ -334,7 +334,7 @@ const InternetError = () => {
                                 <mask id="prefix__H" fill="#fff">
                                     <use xlink:href="#prefix__G" />
                                 </mask>
-                                <path class="tomada"
+                                <path className="tomada"
                                     fill="#2D3F5B"
                                     d="M10.807 -12.875L32.391 8.709 10.793 30.309 -10.793 8.724z"
                                     mask="url(#prefix__H)"
@@ -344,10 +344,10 @@ const InternetError = () => {
                     </g>
                 </svg>
 
-                <h1 class="error-title">
+                <h1 className="error-title">
                     Woops! <br />Something went wrong :(
                 </h1>
-                <h2 class="error-subtitle">
+                <h2 className="error-subtitle">
                     Have you tried turning it off and on again?
                 </h2>
 
