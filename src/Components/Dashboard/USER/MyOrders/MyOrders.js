@@ -17,7 +17,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://whispering-plains-56325.herokuapp.com/orders/${user?.email}`, {
+            fetch(`http://localhost:5000/orders/${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,12 +39,12 @@ const MyOrders = () => {
         }
     }, [user])
 
-    const {refetch}= useQuery("userOrders", ()=> fetch(`https://whispering-plains-56325.herokuapp.com/orders/${user?.email}`, {
+    const { refetch } = useQuery("userOrders", () => fetch(`http://localhost:5000/orders/${user?.email}`, {
         method: "GET",
         headers: {
             'authorization': `Bearer ${localStorage.getItem("accessToken")}`
         }
-    }).then(res=> res.json()))
+    }).then(res => res.json()))
 
     const startOrderCancleProcessing = id => {
         setOpenModal(true);
@@ -52,7 +52,7 @@ const MyOrders = () => {
 
     }
 
-    if(isLoading){
+    if (isLoading) {
         return <Loading></Loading>
     }
 
@@ -67,7 +67,7 @@ const MyOrders = () => {
                 <table className="table w-full">
                     <thead>
                         <tr className="text-center">
-                            <th>S/L</th>
+                            <th>No.</th>
                             <th>Image</th>
                             <th>Product</th>
                             <th>Payment</th>
@@ -76,22 +76,22 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders?.map((product, index)=> <tr className="text-center">
-                                <td>{index+1}</td>
+                            orders?.map((product, index) => <tr className="text-center">
+                                <td>{index + 1}</td>
                                 <td><img src={product.img} className="w-16" alt="" /></td>
                                 <td>{product.productName}</td>
                                 <td>{product.paid ? <button className="btn btn-xs btn-success" disabled>Paid</button> : <Link to={`/dashboard/payment/${product._id}`}><button className="btn btn-xs btn-primary text-white">Pay</button></Link>}</td>
-                                <td>{product.paid ? <button className="btn btn-accent btn-sm text-white" disabled>Shipping</button> : <label htmlFor="cancleConfirmation" className="btn btn-xs btn-error text-white modal-button" onClick={()=>startOrderCancleProcessing(product?._id)}>Cancle</label>}</td>
+                                <td>{product.paid ? <button className="btn btn-accent btn-sm text-white" disabled>Shipping</button> : <label htmlFor="cancleConfirmation" className="btn btn-xs btn-error text-white modal-button" onClick={() => startOrderCancleProcessing(product?._id)}>Cancle</label>}</td>
                             </tr>)
-                            
+
                         }
                     </tbody>
-                    
+
                     {
-                    openModal && <DeleteOrderModal refetch={refetch} orderId={orderId} setOpenModal={setOpenModal}/>
-                }
+                        openModal && <DeleteOrderModal refetch={refetch} orderId={orderId} setOpenModal={setOpenModal} />
+                    }
                 </table>
-                
+
             </div>
         </div>
     );

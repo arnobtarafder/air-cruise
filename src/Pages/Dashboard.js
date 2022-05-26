@@ -52,6 +52,12 @@ const Dashboard = () => {
                         <>
                             <li className="my-1">
                                 <NavLink to="/dashboard/makeAdmin">Make Admin</NavLink>
+                            </li> 
+                            <li className="my-1">
+                                <NavLink to="/dashboard/makeAdmin">Make Admin</NavLink>
+                            </li>
+                             <li className="my-1">
+                                <NavLink to="/dashboard/users">All Users</NavLink>
                             </li>
                         </>
                     {/* // )} */}

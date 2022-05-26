@@ -18,6 +18,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
   }, [scrollYT]);
 
   const logout = () => {
+    localStorage.removeItem("accessToken");
     signOut(auth);
     toast.success(`Thank you, ${user.displayName} to stay with us!`, {
       autoClose: 5000,

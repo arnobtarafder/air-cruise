@@ -51,7 +51,7 @@ const Registration = () => {
 
   if (token) {
     navigate("/", { replace: true });
-    toast.success("Welcome to Jerin's Parlour!");
+    toast.success("Welcome to Air Cruise Corporation!");
   }
 
   const onSubmit = async (data) => {

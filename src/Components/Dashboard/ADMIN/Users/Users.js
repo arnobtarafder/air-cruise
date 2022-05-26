@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Loading from "../../../General/Loading/Loading";
-import UserDeleteConfirmModal from "./UserDeleteConfirmModal";
+// import UserDeleteConfirmModal from "./UserDeleteConfirmModal";
 import UserRow from "../UserRow/UserRow";
 
 const Users = () => {
@@ -11,7 +11,7 @@ const Users = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch("http://localhost:5000/user", {
+    fetch("http://localhost:5000/users", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -39,7 +39,7 @@ const Users = () => {
           <tbody>
             {users?.map((user, index) => (
               <UserRow
-                index={index}
+                index={index + 1}
                 key={user._id}
                 userInfo={user}
                 refetch={refetch}
@@ -49,12 +49,12 @@ const Users = () => {
           </tbody>
         </table>
       </div>
-      {deletingUser && (
+      {/* {deletingUser && (
         <UserDeleteConfirmModal
           deletingUser={deletingUser}
           setDeletingUser={setDeletingUser}
         ></UserDeleteConfirmModal>
-      )}
+      )} */}
     </div>
   );
 };

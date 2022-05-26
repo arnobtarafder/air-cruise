@@ -25,6 +25,7 @@ import RequireAdmin from './Components/Dashboard/RequireAdmin/RequireAdmin';
 import AddProduct from './Components/Dashboard/ADMIN/AddProduct/AddProduct';
 import ManageProduct from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
 import Purchase from './Components/Purchase/Purchase';
+import Users from './Components/Dashboard/ADMIN/Users/Users';
 
 
 
@@ -118,12 +119,20 @@ function App() {
           <Route
             path="makeAdmin"
             element={
-              <RequireAdmin>
+              // <RequireAdmin>
                 <MakeAdmin></MakeAdmin>
-              </RequireAdmin>
+              // </RequireAdmin>
             }
           ></Route>
-           {/* <Route
+           <Route
+            path="users"
+            element={
+              // <RequireAdmin>
+                <Users></Users>
+              // </RequireAdmin>
+            }
+          ></Route>
+           <Route
             path="addProduct"
             element={
               <RequireAdmin>
@@ -138,7 +147,7 @@ function App() {
                 <ManageProduct></ManageProduct>
               </RequireAdmin>
             }
-          ></Route> */}
+          ></Route>
         </Route>
 
         <Route path='*' element={<NotFound />}></Route>

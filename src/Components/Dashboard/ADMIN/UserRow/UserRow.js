@@ -5,10 +5,10 @@ import { toast } from 'react-hot-toast';
 import Swal from 'sweetalert2';
 
 
-const UserRow = ({ user: userInfo, index, refetch  }) => {
+const UserRow = ({ userInfo, index, refetch  }) => {
   const [user] = useAuthState(auth);
 
-  const { name, specialty, img } = userInfo;
+  // const { email } = userInfo;
   const { email, role } = userInfo;
 
 
@@ -33,7 +33,7 @@ const UserRow = ({ user: userInfo, index, refetch  }) => {
                 .then(data => {
                     console.log(data);
                     if (data.acknowledged || data.deleteCount) {
-                        toast.success(`Doctor: ${name} is deleted`)
+                        // toast.success(`Doctor: ${name} is deleted`)
                         refetch();
                     }
                 });
