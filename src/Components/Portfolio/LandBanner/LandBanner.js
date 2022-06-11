@@ -26,6 +26,9 @@ const LandBanner = () => {
               that generate sustainable and scalable social and technical
               systems to make a difference.
             </p>
+            <h2 className='text-xl font-bold'>Education</h2>
+            <h4>Class 8</h4>
+            <h5 className='pb-8'> Engineering University School and College, BUET Campus.</h5>
             <div className="mb-5 flex items-center gap-5">
               <a
                 href="https://github.com/arnobtarafder"

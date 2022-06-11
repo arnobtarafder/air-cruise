@@ -1,23 +1,22 @@
-import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
+import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useQuery } from "react-query";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 import auth from "../../../../firebase.init";
-import Loading from "../../../General/Loading/Loading";
-import DeleteOrderModal from "./DeleteOrderModal";
 
 const MyOrders = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const [orders, setOrders] = useState([]);
-    const [orderId, setOrderId] = useState("")
-    const [user, isLoading] = useAuthState(auth);
-    const navigate = useNavigate();
-
+     
+    const [user] = useAuthState(auth)
+    const [orders, setOrders] = useState([])
+    // state handel
+    const navigate = useNavigate()
 
     useEffect(() => {
+        const email = user?.email
+        console.log(email);
         if (user) {
-            fetch(`http://localhost:5000/orders/${user?.email}`, {
+            fetch(`https://air-cruise.herokuapp.com/orders?email=${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -26,73 +25,141 @@ const MyOrders = () => {
                 .then(res => {
                     console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
-                        // signOut(auth);
-                        // localStorage.removeItem('accessToken');
-                        // navigate('/');
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
                     }
                     return res.json()
                 })
-                .then(data => {
+                .then(data => setOrders(data))
 
-                    setOrders(data);
-                });
         }
-    }, [user])
+    }, [user, navigate])
 
-    const { refetch } = useQuery("userOrders", () => fetch(`http://localhost:5000/orders/${user?.email}`, {
-        method: "GET",
-        headers: {
-            'authorization': `Bearer ${localStorage.getItem("accessToken")}`
-        }
-    }).then(res => res.json()))
 
-    const startOrderCancleProcessing = id => {
-        setOpenModal(true);
-        setOrderId(id)
+
+
+    const deleteOrder = id => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                const url = `https://air-cruise.herokuapp.com/orderpro/${id}`
+                console.log(url, "delete");
+                fetch(url, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'deleted done',
+                                text: ` deleted products ${id}`
+                            })
+
+                        }  
+                        const deleted = orders.filter(del => del._id !== id )
+                        setOrders(deleted)
+                        console.log(data)
+                    })
+
+            }
+        })
 
     }
 
-    if (isLoading) {
-        return <Loading></Loading>
-    }
 
 
+    console.log(orders);
 
     return (
-        <div>
-            <h1 className="text-blue-700 font-bold text-3xl py-3">
-                All Orders in one place {orders?.length}
-            </h1>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr className="text-center">
-                            <th>No.</th>
-                            <th>Image</th>
-                            <th>Product</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders?.map((product, index) => <tr className="text-center">
-                                <td>{index + 1}</td>
-                                <td><img src={product.img} className="w-16" alt="" /></td>
-                                <td>{product.productName}</td>
-                                <td>{product.paid ? <button className="btn btn-xs btn-success" disabled>Paid</button> : <Link to={`/dashboard/payment/${product._id}`}><button className="btn btn-xs btn-primary text-white">Pay</button></Link>}</td>
-                                <td>{product.paid ? <button className="btn btn-accent btn-sm text-white" disabled>Shipping</button> : <label htmlFor="cancleConfirmation" className="btn btn-xs btn-error text-white modal-button" onClick={() => startOrderCancleProcessing(product?._id)}>Cancle</label>}</td>
-                            </tr>)
+        <div className='mt-10'>
 
-                        }
-                    </tbody>
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="main-card mb-3 card">
+                        <div className="card-header"> Your Total orders is {orders?.length}
+                            <div className="btn-actions-pane-right">
+                                <div role="group" className="btn-group-sm btn-group">
+                                    <button className="active btn btn-focus">Email</button>
+                                    <button className="btn btn-focus"> Your Products</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="table-responsive">
+                            <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th className="text-center">#</th>
+                                        <th>Email</th>
+                                        <th className="text-center">products Name</th>
+                                        <th className="text-center">order cancel</th>
+                                        <th className="text-center">Status</th>
 
-                    {
-                        openModal && <DeleteOrderModal refetch={refetch} orderId={orderId} setOpenModal={setOpenModal} />
-                    }
-                </table>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
+                                    {orders.length > 0 &&
+                                        orders?.slice(0).reverse().map((order, index) =>
+
+                                            <>
+
+                                                <tr>
+                                                    <td className="text-center text-muted">{index + 1} </td>
+                                                    <td>
+                                                        <div className="widget-content p-0">
+                                                            <div className="widget-content-wrapper">
+                                                                <div className="widget-content-left mr-3">
+
+                                                                </div>
+                                                                <div className="widget-content-left flex2">
+                                                                    <div className="widget-heading">
+                                                                        {order?.email}  </div>
+                                                                    <div className="widget-subheading opacity-7">  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-center"> {order?.productName} </td>
+                                                    <td className="text-center">
+
+                                                       <button onClick={()=> deleteOrder(order?._id) } className='btn btn-primary btn-sm'> Cancel</button>
+                                         
+                                                    </td>
+
+
+                                                    <td className="text-center">
+                                                        <NavLink to={`/dashboard/payment/${order?._id}`} className="btn btn-primary btn-sm" >pay</NavLink>
+                                         
+                                                    </td>
+                                                    
+                                                </tr>
+
+                                            </>
+
+                                        )
+                                    }
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                       
+                    </div>
+                </div>
             </div>
+
         </div>
     );
 };

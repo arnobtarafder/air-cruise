@@ -1,65 +1,136 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import axiosAuth from "../../../Authentication/AxiosAuth/AxiosAuth";
+import toast from "react-hot-toast";
 
-const SingleProduct = ({ product, index, refetch }) => {
-  const { addedBy, name, available, minimum, price, image } = product;
 
-  const handleRemoveProduct = () => {
-    Swal.fire({
-      title: `Remove ${name} ?`,
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#0074b7",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Remove!",
-    }).then(async (result) => {
-      if (result.isConfirmed) {
-        fetch(`https://zipgrip-tooling.herokuapp.com/product/${product._id}`, {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        }).then((res) => {
-          if (res.status === 200) {
-            Swal.fire("Removed!", `${name} has been removed.`, "success");
-            refetch();
-          }
-        });
-      }
-    });
-  };
 
-  return (
-    <tr key={product._id}>
-      <th>{index + 1}</th>
-      <td>
-        <div className="avatar">
-          <div className="w-16">
-            <img src={image} alt="img" />
-          </div>
-        </div>
-      </td>
-      <td>{name}</td>
-      {/* <td>update</td> */}
-      <td>
-        <button onClick={handleRemoveProduct} className="btn btn-sm btn-error">
-          <span className="mr-3 hidden lg:block">Remove</span>
-          <FontAwesomeIcon
-            className="text-xl block lg:hidden"
-            icon={faCircleMinus}
-          />
-        </button>
-      </td>
-      <td>{addedBy}</td>
-      <td className="text-center">{available}</td>
-      <td className="text-center">{minimum}</td>
-      <td className="text-center">${price}</td>
-    </tr>
-  );
-};
-
+const SingleProduct = ({ product, refetch }) => {
+    const navigate = useNavigate()
+    const handleDelete = (id) => {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "Yes, delete it!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Delete",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          axiosAuth({
+            method: "DELETE",
+            url:
+              "https://manufacturer-website-server.herokuapp.com/part/" +
+              id,
+          }).then(({ data }) => {
+            console.log(data)
+            if (data.success) {
+              toast.success("Delete successfully")
+              refetch()
+            }
+          })
+        }
+      })
+    }
+    return (
+      <div>
+        <table className="w-full text-sm text-left">
+          <thead className="text-xs text-gray-700 uppercase bg-primary dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Image
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Title
+              </th>
+  
+              <th scope="col" className="px-6 py-3">
+                Category
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Quantity
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Min Quantity
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Price
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Added By
+              </th>
+              <th scope="col" className="flex justify-end px-6 py-3">
+                <span className="text-right"></span>
+              </th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            {product.map(
+              ({
+                _id,
+                imageUrl,
+                title,
+                availableQuantity,
+                minOrderQuantity,
+                price,
+                addedBy,
+                category,
+              }) => {
+                return (
+                  <tr key={_id} className="border-b bg-base-300">
+                    <td className="px-6 py-4 font-mono font-bold">
+                      <img
+                        className="max-w-[60px]"
+                        src={imageUrl}
+                        alt=""
+                      />
+                    </td>
+  
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {title}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {category}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {availableQuantity}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {minOrderQuantity}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {price}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      {addedBy}
+                    </td>
+                    <td className="px-6 py-4 font-mono font-bold">
+                      <button
+                        className="btn btn-link btn-xs text-red-600"
+                        onClick={() => handleDelete(_id)}
+                      >
+                        Delete
+                      </button>
+                      <button
+                        className="btn btn-link btn-xs text-blue-600"
+                        onClick={() =>
+                          navigate("/part/" + _id)
+                        }
+                      >
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                )
+              }
+            )}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+  
 export default SingleProduct;

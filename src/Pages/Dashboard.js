@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
@@ -8,21 +8,26 @@ import useAdmin from '../Hooks/useAdmin';
 import Loading from '../Components/General/Loading/Loading';
 
 const Dashboard = () => {
-    const [user] = useAuthState(auth);
-    const [admin, adminLoading] = useAdmin(user);
+   
+    const [user, isLoading] = useAuthState(auth);
+  const [admin] = useAdmin(user);
+  console.log(admin);
 
-    if (adminLoading) {
-        return <Loading />;
-    }
+  if(isLoading) {
+      <Loading />
+  }
+
 
     return (
-        <div className="drawer drawer-mobile max-w-7xl h-screen mx-auto mt-24">
-            <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content px-6 lg:my-6">
+        <div className='mt-[85px]'>
+            <div className="drawer drawer-mobile">
+                <input id="dashboard" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
+                <div className="drawer-content px-6 lg:my-6">
                 <div className="flex justify-between items-center">
                     <label
                         tabIndex="0"
-                        htmlFor="dashboard-sidebar"
+                        htmlFor="dashboard"
                         className="btn lg:hidden btn-sm btn-visited"
                     >
                         <FontAwesomeIcon icon={faArrowRightFromBracket} />
@@ -33,35 +38,34 @@ const Dashboard = () => {
                 </div>
                 <Outlet />
             </div>
-            <div className="drawer-side">
-                <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto w-60 bg-cool text-base-content">
-                    <li className="my-1">
-                        <NavLink to="/dashboard">My Profile</NavLink>
-                    </li>
-                    {/* {!admin ? ( */}
-                        <>
-                            <li className="my-1">
-                                <NavLink to="/dashboard/myOrders">My Orders</NavLink>
-                            </li>
-                            <li className="my-1">
-                                <NavLink to="/dashboard/addReview">Add a Review</NavLink>
-                            </li>
-                        </>
-                    {/* // ) : ( */}
-                        <>
-                            <li className="my-1">
-                                <NavLink to="/dashboard/makeAdmin">Make Admin</NavLink>
-                            </li> 
-                            <li className="my-1">
-                                <NavLink to="/dashboard/makeAdmin">Make Admin</NavLink>
-                            </li>
-                             <li className="my-1">
-                                <NavLink to="/dashboard/users">All Users</NavLink>
-                            </li>
-                        </>
-                    {/* // )} */}
-                </ul>
+                {/* Nested ROUTE HANDEL*/}
+                {/* <Outlet></Outlet> */}
+
+                </div>
+                <div className="drawer-side">
+                    <label htmlFor="dashboard" className="drawer-overlay"></label>
+                    <ul className="menu p-4 pt-12 overflow-y-auto w-[200px] bg-[#232634] text-base-content">
+                        <li><NavLink className="text-white font-bold uppercase" to='/dashboard/myProfile'>
+                       My Profile </NavLink> </li>
+
+                        { admin && <li><NavLink className="text-white uppercase font-bold" to='/dashboard/users'> Make admin </NavLink> </li>}
+
+                        { admin && <li><NavLink className="text-white uppercase font-bold" to='/dashboard/manageProducts'> all products </NavLink> </li>}
+
+                        { admin && <li><NavLink className="text-white uppercase font-bold" to='/dashboard/manageOrders'> all orders </NavLink> </li>}                        
+
+                        { admin && <li><NavLink className="text-white uppercase font-bold" to='/dashboard/addProduct'> add Products </NavLink> </li>}
+
+                       
+                       {/* { !admin &&  <li><NavLink className="text-white font-bold uppercase" to='/dashboard/myOrders'>
+                       My Orders </NavLink> </li>} */}
+{/* 
+                        <li><NavLink className="text-white font-bold uppercase" to='/dashboard/profile'> My Profile </NavLink> </li> */}
+
+                        { !admin && <li><NavLink className="text-white font-bold uppercase" to='/dashboard/addReview'> Add a review </NavLink> </li>}
+                    </ul>
+
+                </div>
             </div>
         </div>
     );

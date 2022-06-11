@@ -7,6 +7,8 @@ import { Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { useQuery } from "react-query";
+import Loading from "../../General/Loading/Loading";
 
 const Review = () => {
   const testimonials = [
@@ -54,6 +56,21 @@ const Review = () => {
     },
   ];
 
+  const { data: reviews, isLoading } = useQuery('reviews', () =>
+  fetch('https://air-cruise.herokuapp.com/reviews', {
+    method: "GET",
+    // headers: {
+    //   'authorization': `Bearer ${localStorage.getItem("accesstoken")}`
+    // }
+  })
+    .then(res => res.json()
+    )
+)
+
+if (isLoading) {
+  return <Loading></Loading>
+}
+
   return (
     <Fragment>
       <div className="py-24 lg:px-24">
@@ -86,7 +103,7 @@ const Review = () => {
           grabCursor={true}
           modules={[Pagination]}
         >
-          {testimonials.map(({ image, name, title, text, rate }, index) => {
+          { reviews?.slice(0).reverse().map(({ image, name, title, text, rate, qoute, from, img, value }, index) => {
             return (
               <SwiperSlide
                 className="card w-full bg-base-100 shadow-xl px-6 rounded-md"
@@ -94,18 +111,19 @@ const Review = () => {
               >
                 <div className="flex items-center content-center gap-4 mx-auto mr-28">
                   <div>
-                    <img src={image} alt="Shoes" className="rounded-xl w-16" />
+                    <img src={img} alt="Shoes" className="rounded-xl w-16" />
                   </div>
                   <div>
                     <h2 className="card-title">{name}</h2>
-                    <h2 className="card-title">{title}</h2>
+                    <h2 className="card-title font-light ">{qoute}</h2>
+                    <h2 className="card-title font-light pt-8">location: {from}</h2>
                   </div>
                 </div>
                 <div className="card-body items-center text-start px-6">
                   <p>{text}</p>
                   <div className="flex mr-48">
                     <p>
-                      <Rating style={{ fontSize: '1rem', marginLeft: '5px' }} initialRating={rate} emptySymbol={<ImStarEmpty style={{ color: '#fdde6c' }} />}
+                      <Rating style={{ fontSize: '1rem', marginLeft: '5px' }} initialRating={value} emptySymbol={<ImStarEmpty style={{ color: '#fdde6c' }} />}
                         fullSymbol={<ImStarFull style={{ color: '#fdde6c' }} />} readonly>
                       </Rating>
                     </p>

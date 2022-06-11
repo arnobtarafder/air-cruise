@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../firebase.init';
+import Loading from '../../../General/Loading/Loading';
 
 const MakeAdmin = () => {
+  const [isLoading] = useAuthState(auth);
   const [email, setEmail] = useState("");
+
+  if(isLoading) {
+    <Loading />
+  }
 
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch(`http://localhost:5000/users/admin`, {
+    fetch(`https://air-cruise.herokuapp.com/users/admin`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -27,6 +35,8 @@ const MakeAdmin = () => {
 
     e.preventDefault();
   };
+
+
   return (
     <div className="px-10 py-10 bg-base-300 h-screen rounded-md">
       <div className="bg-base-100 pl-4 pb-44 pt-4 rounded-2xl">
@@ -42,7 +52,7 @@ const MakeAdmin = () => {
             required
           />
           <button className="btn btn-primary mt-4 lg:mt-0 md:ml-4 lg:ml-4 text-white">
-            Make Admin
+            Make
           </button>
         </form>
       </div>

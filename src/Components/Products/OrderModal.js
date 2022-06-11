@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
@@ -71,7 +71,7 @@ const OrderModal = ({product, setOrder}) => {
                     <input type="text" name="email" value={user?.email} className="input input-bordered w-full my-3" readOnly />
                     <input type="text" name="location" placeholder="Enter your pickup location" className="input input-bordered w-full my-3"  />
                     <input type="text" name="productName" value={product?.name} className="input input-bordered w-full mb-3" readOnly />
-                    <input type="number" name="orderQuantity"  placeholder={`Minimum order ${product?.minimumOrder}`} className="input input-bordered w-full mb-3" />
+                    <input type="number" name="orderQuantity"  placeholder={`Minimum order ${product?.minimum}`} className="input input-bordered w-full mb-3" />
                     <input type="submit" value="Place Order" className="btn btn-primary w-full" />
                     </form>
                 </div>

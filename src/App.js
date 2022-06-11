@@ -23,10 +23,11 @@ import PrivateAuth from "./Components/Authentication/PrivateAuth/PrivateAuth"
 import NotFound from './Components/General/NotFound/NotFound';
 import RequireAdmin from './Components/Dashboard/RequireAdmin/RequireAdmin';
 import AddProduct from './Components/Dashboard/ADMIN/AddProduct/AddProduct';
-import ManageProduct from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
+import ManageProducts from './Components/Dashboard/ADMIN/ManageProduct/ManageProduct';
 import Purchase from './Components/Purchase/Purchase';
 import Users from './Components/Dashboard/ADMIN/Users/Users';
 import { Toaster } from 'react-hot-toast';
+import ManageOrders from './Components/Dashboard/ADMIN/ManageOrders/ManageOrders';
 
 
 
@@ -95,7 +96,6 @@ function App() {
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/contact' element={<ContactUs />}></Route>
         {/* <Route path='/contact' element={<ContactUs />}></Route> */}
-
         <Route
           path="/purchase/:id"
           element={
@@ -106,50 +106,54 @@ function App() {
         ></Route>
 
 
+
         <Route
           path="/dashboard"
-          element={
-            <PrivateAuth>
-              <Dashboard />
+          element={<PrivateAuth>
+            <Dashboard />
             </PrivateAuth>
           }
         >
-          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route index path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
-          <Route
-            path="makeAdmin"
-            element={
-              // <RequireAdmin>
-              <MakeAdmin></MakeAdmin>
-              // </RequireAdmin>
-            }
-          ></Route>
-          <Route
-            path="users"
-            element={
-              // <RequireAdmin>
-              <Users></Users>
-              // </RequireAdmin>
-            }
-          ></Route>
-          <Route
-            path="addProduct"
+          <Route path="makeAdmin"
             element={
               <RequireAdmin>
-                <AddProduct></AddProduct>
+              <MakeAdmin></MakeAdmin>
               </RequireAdmin>
             }
           ></Route>
-          <Route
-            path="manageProduct"
+          <Route path="users"
             element={
               <RequireAdmin>
-                <ManageProduct></ManageProduct>
+              <Users></Users>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route path="addProduct"
+            element={
+              <RequireAdmin>
+              <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route path="manageProducts"
+            element={
+              // <RequireAdmin>
+              <ManageProducts></ManageProducts>
+              // </RequireAdmin>
+            }
+          ></Route>
+          <Route path="manageOrders"
+            element={
+              <RequireAdmin>
+              <ManageOrders></ManageOrders>
               </RequireAdmin>
             }
           ></Route>
         </Route>
+
 
         <Route path='*' element={<NotFound />}></Route>
 

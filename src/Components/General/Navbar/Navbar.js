@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CgMenuLeft } from "react-icons/cg";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
@@ -148,11 +148,15 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
           className={`drawer-content flex flex-col py-[8px] lg:py-[10px] backdrop-blur-[18px] bg-base-200  ${scrollY < 300 && "lg:bg-transparent"
             }`}
         >
+        {/* <div className="flex-1">
+          <Link to="/" className="btn btn-ghost normal-case text-xl">Air-Cruise Co.</Link>
+        </div> */}
+
           <div className="w-full navbar container mx-auto">
             <div className="navbar-start w-20">
               <label
                 tabIndex="1"
-                htmlFor="dashboard-sidebar"
+                htmlFor="dashboard"
                 className="btn btn-ghost lg:hidden"
               >
                 <svg
@@ -174,7 +178,7 @@ const Navbar = ({ handleThemeChange, theme, children }) => {
             <div className="flex-1 px-0 mx-3">
               <p className="font-bold ml-0 md:ml-0 lg:ml-0 lg:w-auto w-full text-2xl ">
                 <NavLink to="/">
-                  <img src="" alt="" className="w-24" />
+                  <img src="" alt="" className="w-24" /> Air Cruise Co.
                 </NavLink>
               </p>
             </div>
